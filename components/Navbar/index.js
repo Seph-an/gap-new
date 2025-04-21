@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,14 +29,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-screen px-4 sm:px-6 md:px-12 lg:px-20 z-50 transition-all duration-300 ${
         scrolled ? "bg-[#1e1e1e] shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          {/* className="relative h-12 w-36 lg:h-16 lg:w-16" */}
           <Link href="/">
             <Image
               src="/logo.webp"
@@ -43,7 +43,7 @@ const Navbar = () => {
               priority
               width={250}
               height={250}
-              className="w-[100px]  lg:w-[130px] ml-[-1rem] object-contain"
+              className="w-[100px] lg:w-[120px] object-contain"
             />
           </Link>
 
@@ -54,15 +54,19 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden z-50"
+            onClick={() => {
+              console.log("Before toggle:", isOpen);
+              setIsOpen(!isOpen);
+              console.log("After toggle:", !isOpen);
+            }}
             whileTap={{ scale: 0.9 }}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? (
-              <X size={32} color="#51d4d6" />
+              <X size={52} color="#51d4d6" />
             ) : (
-              <Menu size={32} color="#51d4d6" />
+              <Menu size={52} color="#51d4d6" />
             )}
           </motion.button>
         </div>

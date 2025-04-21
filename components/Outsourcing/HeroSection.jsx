@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="section-dark">
-      <div className="container hero-container mt-20">
+      <div className="container hero-container mt-20 xl:24">
         <div className="max-w-2xl text-center lg:text-left">
           <h1 className="page-header">
             Empower Your Business with Premier{" "}

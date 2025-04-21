@@ -17,7 +17,7 @@ const BlogCard = ({ post }) => {
         {categories?.map((category, index) => (
           <span
             key={index}
-            className="post_category py-0.5 px-2 bg-gray-300 rounded text-sm font-regular text-[#1e1e1e] "
+            className="post_category py-1 px-2 bg-gray-900 rounded text-sm text-white/90 "
           >
             {category?.Title}
           </span>
@@ -32,7 +32,7 @@ const BlogCard = ({ post }) => {
         {truncatedContent}
       </p>
       <div className=" self-end w-full flex flex-col xl:flex-row justify-between gap-2">
-        <span className=" text-sm text-white/90 font-regular">
+        <span className=" text-sm text-gray-500 font-regular">
           {timeAgo(post?.createdAt)} - {post?.read_time} mins read
         </span>
         <Link href={articleUrl} className="more flex gap-2 items-center ">

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="section-dark">
-      <div className="container hero-container">
+      <div className="container hero-container mt-20 xl:24">
         <div className="max-w-2xl text-center lg:text-left">
           <h1 className="page-header">
             Streamline Your{" "}
@@ -17,10 +17,10 @@ export default function HeroSection() {
             <span className="text-[#51D4D6]"> scalable </span>payroll solutions
             tailored for your business needs.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="mt-12">
             <a
               href="#payroll-services"
-              className="inline-flex items-center bg-[#51D4D6] text-[#0a0a0a] font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition"
+              className="gap-button gap-button-primary"
             >
               Get Payroll Solutions <ArrowRight size={20} className="ml-2" />
             </a>

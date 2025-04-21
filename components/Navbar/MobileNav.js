@@ -12,6 +12,7 @@ const MobileNav = ({ setIsOpen }) => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about-us" },
     { name: "Jobseekers", href: "/job-seeker" },
+    { name: "Contact", href: "/contact-us" },
     { name: "Blog", href: "/blog" },
   ];
 
@@ -26,7 +27,7 @@ const MobileNav = ({ setIsOpen }) => {
     },
     {
       name: "Staff Outsourcing",
-      href: "/workforce-outsourcing",
+      href: "/staff-outsourcing",
     },
   ];
 
@@ -84,7 +85,7 @@ const MobileNav = ({ setIsOpen }) => {
 
   return (
     <motion.div
-      className="lg:hidden fixed inset-0 bg-white z-40 pt-20 pb-6 px-4 overflow-y-auto"
+      className="lg:hidden fixed inset-0 bg-[#0a0a0a] z-40 pt-20 pb-6 px-4 overflow-y-auto"
       initial="hidden"
       animate="visible"
       exit="exit"
@@ -98,7 +99,7 @@ const MobileNav = ({ setIsOpen }) => {
           <motion.div key={link.name} variants={itemVariants}>
             <Link
               href={link.href}
-              className="block py-3 text-lg font-medium text-gray-800 hover:text-blue-600 border-b border-gray-100"
+              className="block py-3 text-lg font-medium text-whie/90 hover:text-[#51D4D6]"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -110,7 +111,7 @@ const MobileNav = ({ setIsOpen }) => {
         <motion.div variants={itemVariants}>
           <button
             onClick={() => setServicesOpen(!servicesOpen)}
-            className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-800 hover:text-blue-600 border-b border-gray-100"
+            className="flex items-center justify-between w-full py-3 text-lg font-medium text-white/90 hover:text-[#51D4D6]"
           >
             <span>Services</span>
             <motion.span
@@ -132,7 +133,7 @@ const MobileNav = ({ setIsOpen }) => {
                 <motion.div key={service.name} variants={itemVariants}>
                   <Link
                     href={service.href}
-                    className="block py-2 text-gray-700 hover:text-blue-600"
+                    className="block py-2 text-gray-700 hover:text-[#51D4D6]"
                     onClick={() => setIsOpen(false)}
                   >
                     {service.name}
@@ -147,7 +148,7 @@ const MobileNav = ({ setIsOpen }) => {
         <motion.div variants={itemVariants} className="pt-2">
           <Link
             href="/jobs"
-            className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-colors duration-200"
+            className="bg-[#51D4D6] w-[200px] justify-center inline-flex items-center text-[#0a0a0a] font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity duration-500 ease-in-out"
             onClick={() => setIsOpen(false)}
           >
             Jobs

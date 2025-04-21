@@ -113,6 +113,7 @@ body {
 .blog-lists > div:last-child hr {
   display: none;
 }
+
 .blog-lists > div:last-child .more {
   bottom: 0;
 }

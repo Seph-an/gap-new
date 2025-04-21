@@ -64,8 +64,7 @@ export default function Services() {
             streamline operations, reduce costs, and unlock growth without the
             hassle.
           </p>
-
-          <a href="/contact-us" className="gap-button">
+          <a href="/contact-us" className="gap-button gap-button-primary mt-8">
             Connect with us <ArrowRight size={20} className="ml-2" />
           </a>
         </div>

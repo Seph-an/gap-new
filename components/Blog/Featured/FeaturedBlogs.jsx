@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import BlogCards from "./BlogCards";
 import { ArrowRight } from "lucide-react";
@@ -19,15 +17,20 @@ const FeaturedBlogs = () => {
           think you'll actually enjoy.
         </p>
         <BlogCards />
-        <p className="text-center gap-subtitle">
-          <span className="text-[#51D4D6] ">💡 Want more? </span>
-          Discover more expert insights - click{" "}
-          <span className="text-[#51D4D6] font-semibold">"Visit Blog"</span> to
-          stay ahead.
+        <p className="mt-5 gap-subtitle max-w-5xl">
+          We are constantly updating our blog with{" "}
+          <span className="text-[#51D4D6]">new content,</span> so be sure to
+          check back often for the latest insights and trends in the industry.
         </p>
-        <Link href="/blog" className="gap-button gap-button-primary mt-8">
+
+        <Link href="/blog" className="gap-button gap-button-primary mt-5">
           <span> Visit Blog</span>
-          <ArrowRight color="#0a0a0a" size={20} strokeWidth={2} />
+          <ArrowRight
+            color="#0a0a0a"
+            size={20}
+            strokeWidth={2}
+            className="ml-2"
+          />
         </Link>
       </div>
     </section>

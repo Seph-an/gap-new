@@ -7,7 +7,7 @@ const GapAd = ({ pagination }) => {
     <div
       className={`${
         pageCount < 2 && "pb-0 md:pb-20 mt-12 md:mt-0"
-      } sticky top-0 grow flex flex-col gap-16 md:gap-12  min-w-[300px] pt-5  `}
+      } grow flex flex-col gap-16 md:gap-12  min-w-[300px] pt-5`}
     >
       <Image
         priority

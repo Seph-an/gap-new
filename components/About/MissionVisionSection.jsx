@@ -23,7 +23,7 @@ const MissionVisionSection = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-[#0a0a0a] p-6 lg:p-8 rounded-lg shadow-md hover:shadow-[0_0_15px_5px_#51D4D6] transition-shadow duration-500"
+              className="bg-[#0a0a0a] p-6 lg:p-8 rounded-lg gap-shadow"
             >
               <h3 className="text-2xl font-semibold mb-3 text-white/90">
                 {item.title}

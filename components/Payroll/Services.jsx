@@ -62,7 +62,7 @@ export default function Services() {
             Let’s craft a flawless pay experience together!
           </p>
 
-          <a href="/contact-us" className="gap-button">
+          <a href="/contact-us" className="gap-button gap-button-primary mt-8">
             Connect with us <ArrowRight size={20} className="ml-2" />
           </a>
         </div>

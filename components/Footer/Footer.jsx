@@ -4,8 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const footerTitle =
-    "border-l-2 border-[#51D4D6] pl-4 text-lg font-semibold mb-4";
+  const footerTitle = "text-center md:text-left text-lg font-semibold mb-4";
   const imgWidth = 80;
   const imgHeight = 80;
   const socialImg = 40;
@@ -19,11 +18,11 @@ export default function Footer() {
   const footerLink =
     "hover:text-[#51D4D6] transition-colors duration-300 ease-in-out";
   return (
-    <footer className="m-8">
-      <div className="w-full  rounded-lg bg-[#1e1e1e]">
-        <div className="p-8 container flex justify-between flex-wrap gap-6 lg:gap-10">
+    <footer className="m-4 md:m-6 lg:m-8 ">
+      <div className="rounded-lg bg-[#1e1e1e]">
+        <div className="w-full p-6 md:p-8 flex justify-between flex-wrap gap-8 lg:gap-10">
           {/* Subscribe Section */}
-          <div className="bg-[#0a0a0a] p-6 rounded-lg">
+          <div className="bg-[#0a0a0a] w-full sm:w-fit mx-auto sm:mx-0 p-6 rounded-lg">
             <div className="flex flex-col items-center gap-6 mb-4">
               <Image
                 src="/logo.png"
@@ -44,34 +43,34 @@ export default function Footer() {
           </div>
 
           {/* Links Section */}
-          <div>
+          <div className="mx-auto sm:mx-0">
             <h3 className={footerTitle}>Company</h3>
-            <div className="grid grid-cols-2 gap-2 text-gray-300">
-              <a className={footerLink} href="#">
+            <div className="grid grid-cols-3 sm:grid-cols-2 gap-2 text-gray-300">
+              <a className={footerLink} href="/">
                 Home
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/payroll-management">
                 Payroll
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/about-us">
                 About
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/recruitment-services">
                 Recruitment
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/contact-us">
                 Contact
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/staff-outsourcing">
                 Outsourcing
               </a>
               <a className={footerLink} href="/frequently-asked-questions">
                 FAQs
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/jobseekers">
                 Jobseekers
               </a>
-              <a className={footerLink} href="#">
+              <a className={footerLink} href="/blog">
                 Blog
               </a>
               <a className={footerLink} href="#">
@@ -81,10 +80,10 @@ export default function Footer() {
           </div>
 
           {/* Social Icons Section */}
-          <div className="flex flex-col gap-8">
+          <div className="mx-auto sm:mx-0 flex flex-col gap-8">
             <div>
-              <h3 className={footerTitle}>Connect With Us</h3>
-              <div className="flex gap-4">
+              <h3 className={footerTitle}>Connect with us</h3>
+              <div className="flex gap-4 justify-center md:justify-start">
                 <a href="#" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image

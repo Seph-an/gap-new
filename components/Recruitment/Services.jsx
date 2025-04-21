@@ -21,7 +21,7 @@ export default function Services() {
       icon: <Star size={24} />,
     },
     {
-      title: "Freelance Recruitment",
+      title: "Gig Recruitment",
       description:
         "Find remote and freelance talent to drive your projects forward.",
       icon: <Users size={24} />,
@@ -58,7 +58,7 @@ export default function Services() {
             can stream-line your hiring process and drive your business forward.
           </p>
 
-          <a href="/contact-us" className="gap-button">
+          <a href="/contact-us" className="gap-button gap-button-primary mt-8">
             Connect with us <ArrowRight size={20} className="ml-2" />
           </a>
         </div>

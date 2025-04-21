@@ -15,10 +15,8 @@ export async function GET() {
 
   try {
     const { data } = await axios.get(URL, headers);
-    // console.log("The cat data in the backend:", data);
     return NextResponse.json({ success: true, data: data });
   } catch (error) {
-    // console.error("Error fetching categories:", error.message);
     return NextResponse.json(
       {
         success: false,

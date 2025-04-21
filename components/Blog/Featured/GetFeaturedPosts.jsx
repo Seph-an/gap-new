@@ -14,4 +14,3 @@ const getFeaturedPosts = (data) => {
 };
 
 export default getFeaturedPosts;
-//   console.log(getFeaturedPosts(data));

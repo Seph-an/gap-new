@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const values = [
   {
@@ -46,10 +46,7 @@ const CoreValuesSection = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <div
-              key={index}
-              className="bg-[#1e1e1e] p-6 rounded-lg shadow-md hover:shadow-[0_0_15px_5px_#51D4D6] transition-shadow duration-500"
-            >
+            <div key={index} className="bg-[#1e1e1e] p-6 rounded-lg gap-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <CheckCircle size={24} className="text-[#51D4D6]" />
                 <h3 className="text-xl font-semibold">{value.title}</h3>
@@ -57,6 +54,19 @@ const CoreValuesSection = () => {
               <p className="text-gray-300">{value.description}</p>
             </div>
           ))}
+        </div>
+        <div className="w-full flex flex-col items-center mt-12 gap-8">
+          <p className="gap-subtitle max-w-3xl ">
+            Connect with us to power your business with expert{" "}
+            <span className="text-[#51D4D6]">
+              talent acquisition, payrol management
+            </span>{" "}
+            and <span className="text-[#51D4D6]">staff outsourcing</span> to
+            streamline operations, and unlock growth.
+          </p>
+          <a href="/contact-us" className="gap-button gap-button-primary">
+            Work with us <ArrowRight size={20} className="ml-2" />
+          </a>
         </div>
       </div>
     </section>
