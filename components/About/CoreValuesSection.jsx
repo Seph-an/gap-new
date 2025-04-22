@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const values = [
@@ -41,32 +42,65 @@ const CoreValuesSection = () => {
       className="w-screen py-16 px-6 md:px-12 lg:px-20  bg-gray-900 text-gray-100"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl  font-bold mb-8 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="text-3xl font-bold mb-8 text-center"
+        >
           Our Core Values
-        </h2>
+        </motion.h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <div key={index} className="bg-[#1e1e1e] p-6 rounded-lg gap-shadow">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.15 + 0.2,
+              }}
+              className="bg-[#1e1e1e] p-6 rounded-lg gap-shadow"
+            >
               <div className="flex items-center gap-3 mb-3">
                 <CheckCircle size={24} className="text-[#51D4D6]" />
                 <h3 className="text-xl font-semibold">{value.title}</h3>
               </div>
               <p className="text-gray-300">{value.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
+
         <div className="w-full flex flex-col items-center mt-12 gap-8">
-          <p className="gap-subtitle max-w-3xl ">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            className="gap-subtitle max-w-3xl text-center"
+          >
             Connect with us to power your business with expert{" "}
             <span className="text-[#51D4D6]">
               talent acquisition, payrol management
             </span>{" "}
             and <span className="text-[#51D4D6]">staff outsourcing</span> to
             streamline operations, and unlock growth.
-          </p>
-          <a href="/contact-us" className="gap-button gap-button-primary">
+          </motion.p>
+
+          <motion.a
+            href="/contact-us"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+            className="gap-button gap-button-primary"
+          >
             Work with us <ArrowRight size={20} className="ml-2" />
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>
