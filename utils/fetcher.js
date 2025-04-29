@@ -1,4 +1,4 @@
-// utils/fetchBlogs.js
+//utils/fetcher.js
 
 import axios from "axios";
 
@@ -45,17 +45,13 @@ export async function fetchCategories() {
 
 export async function fetchBlog(slug) {
   const baseURL = getBaseURL();
-  const url = new URL(IS_BUILD_TIME ? "/api/blogs" : "/api/blog", baseURL);
+  const url = new URL(IS_BUILD_TIME ? "/api/blogs" : "/api/fetchBlog", baseURL);
 
-  url.searchParams.set("populate", "categories");
-  url.searchParams.set("filters[slug][$eq]", slug);
+  url.searchParams.set("slug", slug);
 
   const headers = IS_BUILD_TIME ? { Authorization: `Bearer ${STRAPI_TOKEN}` } : undefined;
 
   const { data } = await axios.get(url.toString(), { headers });
 
-  // Strapi returns an array even when filtering by slug
-  const post = IS_BUILD_TIME ? data.data[0] : data.data[0];
-
-  return post || null;
+  return IS_BUILD_TIME ? data : data.data;
 }

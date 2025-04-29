@@ -108,7 +108,7 @@ export default function Footer() {
                 <a href="#" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
-                    src="/socials/whatsApp.png"
+                    src="/socials/whatsapp.png"
                     alt="WhatsApp"
                     width={socialImg}
                     height={socialImg}
@@ -118,7 +118,7 @@ export default function Footer() {
                 <a href="#" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
-                    src="/socials/linkedIn.png"
+                    src="/socials/linkedin.png"
                     alt="LinkedIn"
                     width={socialImg}
                     height={socialImg}

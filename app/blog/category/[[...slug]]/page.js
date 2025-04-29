@@ -5,17 +5,16 @@ import { fetchBlogs, fetchCategories } from "@/utils/fetchBlogs";
 
 export async function generateStaticParams() {
   const categories = await fetchCategories();
-  const dataCat = categories.data;
-  const allFilters = ["all", ...dataCat.map((cat) => cat.Title)];
+  const allFilters = ["all", ...categories.map((cat) => cat.Title)];
   const paths = [];
   for (const filter of allFilters) {
     const blogsData = await fetchBlogs({ filter, page: 1 });
-    const meta = blogsData.data.meta;
+    const { pagination } = blogsData.meta;
 
-    for (let p = 1; p <= meta.pagination.pageCount; p++) {
+    for (let p = 1; p <= pagination.pageCount; p++) {
       const params = [];
       if (filter !== "all") params.push(filter);
-      if (p > 1) params.push(p.toString());
+      if (p > 1)           params.push(p.toString());
 
       paths.push({ slug: params });
     }
@@ -24,22 +23,23 @@ export async function generateStaticParams() {
 }
 
 const Page = async ({ params }) => {
-  const { slug = [] } = await params;
+  const slug = params.slug ?? [];
   const filter = slug[0] ?? "all";
   const page = slug[1] ? parseInt(slug[1], 10) : 1;
 
   const blogsRes = await fetchBlogs({ filter, page });
-  const data = blogsRes.data.data;
-  const meta = blogsRes.data.meta;
-  const catsRes = await fetchCategories();
+  const posts = blogsRes.data;
+
+  const pagination = blogsRes.meta.pagination;
+  const categories = await fetchCategories();
 
   return (
     <BlogHome
       filter={filter}
       page={page}
-      blogPosts={data}
-      pagination={meta.pagination}
-      categories={catsRes.data}
+      blogPosts={posts}
+      pagination={pagination}
+      categories={categories}
     />
   );
 };
