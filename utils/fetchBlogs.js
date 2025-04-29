@@ -18,6 +18,7 @@ export async function fetchBlogs({
   featured = false,
   pageSize = 7,
 }) {
+  console.log("baseURL in fetchblogs", BASE_URL);
   try {
     const response = await axios.get(url, {
       params: {

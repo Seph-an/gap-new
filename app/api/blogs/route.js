@@ -18,6 +18,8 @@ export async function GET(req) {
   const TOKEN = process.env.FETCH_BLOGS_TOKEN;
 
   const url = new URL(baseURL);
+  console.log("base url in blogs-route.js", baseURL);
+  console.log("url in blogs-route.js", url);
 
   // Always populate categories
   url.searchParams.append("populate", "categories");

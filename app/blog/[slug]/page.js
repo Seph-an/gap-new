@@ -9,7 +9,9 @@ export async function generateStaticParams() {
 
   // First, fetch page 1 to learn how many pages exist
   const firstPage = await fetchBlogs({ filter: "all", page: 1 });
+  console.log("first page data in first slug-page", firstPage);
   const meta = firstPage.data.meta;
+  console.log("meta in first slug-page", meta);
   const pageCount = meta.pagination.pageCount;
 
   // Loop through all pages
