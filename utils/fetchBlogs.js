@@ -1,16 +1,19 @@
-//utils/fetchBlogs.js
-// utils/fetchCategories.js
+// utils/fetchBlogs.js
+
 import axios from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-const url = `${BASE_URL}/api/blogs`;
+const STRAPI_URL = process.env.FETCH_BLOGS_URL;
+const STRAPI_TOKEN = process.env.FETCH_BLOGS_TOKEN;
+const IS_BUILD_TIME =
+  typeof window === "undefined" && process.env.NODE_ENV === "production";
 
-// export async function fetchBlogs({ filter = "all", page = 1 }) {
-//   const response = await axios.get(url, {
-//     params: { filter, page },
-//   });
-//   return response.data;
-// }
+function getBaseURL() {
+  if (IS_BUILD_TIME) {
+    return STRAPI_URL;
+  } else {
+    return "";
+  }
+}
 
 export async function fetchBlogs({
   filter = "all",
@@ -18,71 +21,57 @@ export async function fetchBlogs({
   featured = false,
   pageSize = 7,
 }) {
-  console.log("baseURL in fetchblogs", BASE_URL);
-  try {
-    const response = await axios.get(url, {
-      params: {
-        filter,
-        page,
-        featured: featured ? "true" : undefined,
-        pageSize,
-      },
-    });
+  const baseURL = getBaseURL();
+  const url = new URL(IS_BUILD_TIME ? "/api/blogs" : "/api/blog", baseURL);
 
-    return response.data;
-  } catch (error) {
-    console.error("Blogs fetch error:", error);
-    return {
-      success: false,
-      error: error.response?.data?.message || "Failed to fetch blogs",
-    };
-  }
+  url.searchParams.set("populate", "categories");
+  if (featured) url.searchParams.set("filters[isFeatured][$eq]", "true");
+  else if (filter !== "all")
+    url.searchParams.set("filters[categories][Title][$eq]", filter);
+
+  url.searchParams.set("pagination[page]", String(page));
+  url.searchParams.set("pagination[pageSize]", String(pageSize));
+
+  const headers = IS_BUILD_TIME
+    ? { Authorization: `Bearer ${STRAPI_TOKEN}` }
+    : undefined;
+
+  const { data } = await axios.get(url.toString(), { headers });
+
+  return IS_BUILD_TIME ? data : data.data;
 }
 
-// Fetch all categories via Next.js API route
 export async function fetchCategories() {
-  const response = await axios.get(`${BASE_URL}/api/fetchCategories`);
-  return response.data.data;
+  const baseURL = getBaseURL();
+  const url = new URL(
+    IS_BUILD_TIME ? "/api/categories" : "/api/fetchCategories",
+    baseURL
+  );
+
+  const headers = IS_BUILD_TIME
+    ? { Authorization: `Bearer ${STRAPI_TOKEN}` }
+    : undefined;
+
+  const { data } = await axios.get(url.toString(), { headers });
+
+  return IS_BUILD_TIME ? data.data : data.data;
 }
 
-// Fetch a single blog by slug via Next.js API route
 export async function fetchBlog(slug) {
-  const response = await axios.get(url, {
-    params: { slug },
-  });
-  return response.data;
+  const baseURL = getBaseURL();
+  const url = new URL(IS_BUILD_TIME ? "/api/blogs" : "/api/blog", baseURL);
+
+  url.searchParams.set("populate", "categories");
+  url.searchParams.set("filters[slug][$eq]", slug);
+
+  const headers = IS_BUILD_TIME
+    ? { Authorization: `Bearer ${STRAPI_TOKEN}` }
+    : undefined;
+
+  const { data } = await axios.get(url.toString(), { headers });
+
+  // Strapi returns an array even when filtering by slug
+  const post = IS_BUILD_TIME ? data.data[0] : data.data[0];
+
+  return post || null;
 }
-
-// export async function fetchCategories() {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/api/fetchCategories`);
-//     return {
-//       success: true,
-//       data: response.data.data
-//     };
-//   } catch (error) {
-//     console.error("Categories fetch error:", error);
-//     return {
-//       success: false,
-//       error: error.response?.data?.message || "Failed to fetch categories"
-//     };
-//   }
-// }
-
-// export async function fetchBlog(slug) {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/api/blog`, {
-//       params: { slug }
-//     });
-//     return {
-//       success: true,
-//       data: response.data.data[0] // Assuming array response
-//     };
-//   } catch (error) {
-//     console.error("Blog post fetch error:", error);
-//     return {
-//       success: false,
-//       error: error.response?.data?.message || "Failed to fetch blog post"
-//     };
-//   }
-// }

@@ -162,7 +162,7 @@ export default function Footer() {
           <p className="text-base text-white/90">
             © {year} G.R.S.L. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-2 text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center gap-4 my-2 text-sm text-gray-400">
             <a href="#">Privacy Policy</a>
             <a href="#">Attributions</a>
             <a href="#">Terms of Use</a>
