@@ -169,9 +169,15 @@ export default function Footer() {
 
             <a href="/cookie-policy">Cookie Policy</a>
           </div>
-	 <p className="text-sm text-white/90">
-	    Developed by <a href="https://sephanly.com" className="text-underline font-medium text-green-500">Sephanly</a>
-         </p>
+          <p className="text-sm text-white/90">
+            Developed by{" "}
+            <a
+              href="https://sephanly.com"
+              className="text-underline font-medium text-green-500"
+            >
+              Sephanly
+            </a>
+          </p>
         </div>
       </div>
     </footer>
