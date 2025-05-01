@@ -1,3 +1,4 @@
+//app/blog/page.js
 import BlogHome from "@/components/Blog/Home/BlogHome";
 import { fetchBlogs, fetchCategories } from "@/utils/fetchBlogs";
 
