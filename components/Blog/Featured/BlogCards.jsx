@@ -3,22 +3,19 @@
 import BlogCard from "./BlogCard";
 import getFeaturedPosts from "./GetFeaturedPosts";
 import { fetchBlogs } from "@/utils/fetchBlogs";
-
+import { notFound } from "next/navigation";
 const BlogCards = async () => {
   const allPostsData = await fetchBlogs({
     filter: "all",
     pageSize: 20, // Fetch enough posts to have enough to filter from
     page: 1,
   });
-
   // Normalize the posts array depending on build/runtime
   const allPosts = Array.isArray(allPostsData)
     ? allPostsData
     : allPostsData?.data || [];
-
   // Apply your getFeaturedPosts logic
   const featuredPosts = getFeaturedPosts(allPosts);
-
   return (
     <div className="mt-12 mb-8 lg:mt-16 pb-4 w-full grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
       {featuredPosts?.length ? (

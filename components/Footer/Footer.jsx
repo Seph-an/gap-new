@@ -163,11 +163,11 @@ export default function Footer() {
             © {year} G.R.S.L. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-2 text-sm text-gray-400">
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <a href="#">Attributions</a>
-            <a href="#">Terms of Use</a>
+            <a href="/terms-of-service">Terms of Use</a>
 
-            <a href="#">Cookie Policy</a>
+            <a href="/cookie-policy">Cookie Policy</a>
           </div>
 	 <p className="text-sm text-white/90">
 	    Developed by <a href="https://sephanly.com" className="text-underline font-medium text-green-500">Sephanly</a>
