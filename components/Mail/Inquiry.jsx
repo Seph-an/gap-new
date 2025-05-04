@@ -49,7 +49,7 @@ export default function Inquiry({ name, email, phone, message }) {
               </Text>
             </Section>
             <Section className="text-center py-4 bg-gray-800">
-              <Text className="text-xs text-[#51D4D6]">
+              <Text className="text-sm text-[#51D4D6]">
                 &copy; {year} G.R.S.L. All rights reserved.
               </Text>
             </Section>
