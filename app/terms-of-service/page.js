@@ -75,16 +75,17 @@ export default function TermsOfService() {
           </h1>
 
           <p className="mb-6">
-            These Terms of Service ("Terms") govern your access to and use of
-            the website, platforms, and services provided by{" "}
+            These Terms of Service (&quot;Terms&quot;) govern your access to and
+            use of the website, platforms, and services provided by{" "}
             <span className="text-[#51D4D6] font-medium">
               Gap Recruitment Services Limited
             </span>{" "}
-            ("the Company", "we", or "us"), a licensed recruitment and human
-            resource consulting firm registered and operating under the Laws of
-            the Republic of Kenya. By engaging with our services or visiting our
-            platform, you agree to these Terms in full. If you do not accept
-            these Terms, you must refrain from using our services.
+            (&quot;the Company&quot;, &quot;we&quot;, or &quot;us&quot;), a
+            licensed recruitment and human resource consulting firm registered
+            and operating under the Laws of the Republic of Kenya. By engaging
+            with our services or visiting our platform, you agree to these Terms
+            in full. If you do not accept these Terms, you must refrain from
+            using our services.
           </p>
 
           <h2 className="text-white/90 text-2xl font-semibold mt-10 mb-4">
@@ -204,8 +205,8 @@ export default function TermsOfService() {
             any indirect, special, incidental, or consequential damages arising
             from your use of our services, including but not limited to job
             mismatch, delayed payroll processing, reputational loss, or contract
-            termination. We provide our services on an "as-is" basis without
-            warranties of any kind.
+            termination. We provide our services on an &quot;as-is&quot; basis
+            without warranties of any kind.
           </p>
 
           <h2 className="text-white/90 text-2xl font-semibold mt-10 mb-4">
