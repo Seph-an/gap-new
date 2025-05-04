@@ -68,10 +68,10 @@ export default function CookiePolicy() {
             <span className="text-[#51D4D6]">
               Gap Recruitment Services Limited
             </span>{" "}
-            ("we", "our", or "us"), a recruitment and HR consultancy firm
-            governed by the Laws of Kenya, uses cookies and similar tracking
-            technologies on our digital platforms. By using our website, you
-            consent to our use of cookies as described herein.
+            (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) , a recruitment
+            and HR consultancy firm governed by the Laws of Kenya, uses cookies
+            and similar tracking technologies on our digital platforms. By using
+            our website, you consent to our use of cookies as described herein.
           </p>
 
           <h2 className="text-white/90 text-2xl font-semibold mt-10 mb-4">

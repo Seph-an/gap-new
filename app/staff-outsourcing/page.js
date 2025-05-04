@@ -38,7 +38,7 @@ export const metadata = {
   openGraph: {
     title: "Staff Outsourcing Services in Kenya & East Africa",
     description:
-      "Scale your workforce efficiently with Gap Recruitment’s expert staff outsourcing services in Kenya and East Africa.",
+      "Scale your workforce efficiently with Gap Recruitment&rsquo;s expert staff outsourcing services in Kenya and East Africa.",
     url: "https://gaprecruitment.co.ke/staff-outsourcing",
     siteName: "Gap Recruitment Services",
     images: [

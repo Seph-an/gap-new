@@ -63,10 +63,11 @@ export default function PrivacyPolicy() {
             <span className="text-[#51D4D6]">
               Gap Recruitment Services Limited
             </span>{" "}
-            ("we", "our", or "us"), a licensed recruitment and HR consulting
-            firm operating under the Laws of the Republic of Kenya, collects,
-            uses, discloses, and protects your personal data. By interacting
-            with our services, you consent to the practices described herein.
+            (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), a licensed
+            recruitment and HR consulting firm operating under the Laws of the
+            Republic of Kenya, collects, uses, discloses, and protects your
+            personal data. By interacting with our services, you consent to the
+            practices described herein.
           </p>
 
           <h2 className="text-white/90 text-2xl font-semibold mt-10 mb-4">
