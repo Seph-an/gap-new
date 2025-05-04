@@ -1,5 +1,5 @@
 // scripts/generate-sitemap.js
-import { generateSitemap } from "../lib/sitemap";
+import { generateSitemap } from "../lib/sitemap.js";
 
 generateSitemap()
   .then(() => {
