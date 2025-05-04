@@ -14,7 +14,7 @@ const accolades = [
 
 const stats = [
   { value: 5, label: "Years of Experience" },
-  { value: 50, label: "Trusted Partners" },
+  { value: 100, label: "Trusted Partners" },
   { value: 5000, label: "Hired Talent" },
   { value: 10, label: "Payroll Solutions" },
 ];
@@ -31,7 +31,7 @@ const WhyUs = () => {
 
   useEffect(() => {
     if (isInView) {
-      const intervals = stats.map((stat, index) => {
+      stats.forEach((stat, index) => {
         const increment = Math.ceil(stat.value / 100); // Increment value for smooth animation
         let currentValue = 0;
 
@@ -49,12 +49,7 @@ const WhyUs = () => {
             clearInterval(interval); // Stop the interval when the target value is reached
           }
         }, 20); // Update every 20ms
-
-        return interval;
       });
-
-      // Cleanup intervals when the component unmounts or the effect re-runs
-      return () => intervals.forEach((interval) => clearInterval(interval));
     }
   }, [isInView]); // Only run when `isInView` changes
 
@@ -66,6 +61,7 @@ const WhyUs = () => {
         animate={isInView ? "visible" : "hidden"}
         className="container"
       >
+        {/* Title */}
         <motion.h3
           variants={itemVariants}
           className="text-lg md:text-xl text-[#51d4d6] text-center font-semibold mb-4"

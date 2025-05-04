@@ -1,3 +1,5 @@
+"use client";
+
 import {
   DollarSign,
   Percent,
@@ -5,6 +7,7 @@ import {
   BarChart2,
   ArrowRight,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const types = [
@@ -37,26 +40,60 @@ export default function Services() {
   return (
     <section id="payroll-services" className="section-dark">
       <div className="container">
-        <h2 className="gap-title">Our Payroll Services</h2>
-        <p className="gap-subtitle">
+        {/* Title */}
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="gap-title"
+        >
+          Our Payroll Services
+        </motion.h2>
+
+        {/* Subtitle */}
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          className="gap-subtitle"
+        >
           Step into a new era where every paycheck is a breeze, taxes are tamed,
           and benefits are{" "}
           <span className="text-[#51D4D6]">built just for you.</span>
-        </p>
+        </motion.p>
+
+        {/* Service Cards */}
         <div className="service-grid">
           {types.map((type, index) => (
-            <div
+            <motion.div
               key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 0.2 + index * 0.2, // Staggered animation for each card
+              }}
               className="flex flex-col items-center p-6 bg-[#1e1e1e] rounded-lg gap-shadow"
             >
               <div className="gap-icon">{type.icon}</div>
               <h3 className="card-title">{type.title}</h3>
               <p className="card-content">{type.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="w-full flex flex-col items-center gap-8">
+        {/* Call to Action */}
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+          className="w-full flex flex-col items-center gap-8"
+        >
           <p className="gap-subtitle max-w-3xl ">
             <span className="text-[#51D4D6]">Fed up with payroll puzzles?</span>{" "}
             Let’s craft a flawless pay experience together!
@@ -65,7 +102,7 @@ export default function Services() {
           <a href="/contact-us" className="gap-button gap-button-primary mt-8">
             Connect with us <ArrowRight size={20} className="ml-2" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

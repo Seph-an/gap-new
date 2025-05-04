@@ -1,5 +1,5 @@
 "use client";
-import useStore from "@lib/store";
+import useStore from "@/lib/store";
 import { X } from "lucide-react";
 
 const Close = () => {
@@ -9,7 +9,6 @@ const Close = () => {
   const toggleVisibilityChat = useStore((state) => state.toggleVisibilityChat);
 
   const handleClick = () => {
-    console.log("chat icon clicked anew");
     toggleVisibilityChatOptions();
     toggleVisibilityChat();
   };

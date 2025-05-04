@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Edit, Settings, CheckCircle, Package } from "lucide-react";
 
 export default function Process() {
@@ -30,19 +33,49 @@ export default function Process() {
   return (
     <section id="process" className="section-light">
       <div className="container">
-        <h2 className="gap-title">How it works.</h2>
-        <p className="gap-subtitle">
+        {/* Title */}
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="gap-title"
+        >
+          How it works.
+        </motion.h2>
+
+        {/* Subtitle */}
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          className="gap-subtitle"
+        >
           Explore the seamless journey from{" "}
           <span className="text-[#51D4D6]">data collection</span> to{" "}
           <span className="text-[#51D4D6]">payday perfection.</span>
-        </p>
+        </motion.p>
+
+        {/* Process Steps */}
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit, index) => (
-            <div key={index} className="gap-card bg-[#0a0a0a]">
+            <motion.div
+              key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 0.2 + index * 0.2, // Staggered animation for each step
+              }}
+              className="gap-card bg-[#0a0a0a]"
+            >
               <div className="gap-icon">{benefit.icon}</div>
-              <h3 className="card-title ">{benefit.title}</h3>
-              <p className="card-content ">{benefit.description}</p>
-            </div>
+              <h3 className="card-title">{benefit.title}</h3>
+              <p className="card-content">{benefit.description}</p>
+            </motion.div>
           ))}
         </div>
       </div>

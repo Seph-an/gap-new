@@ -1,7 +1,7 @@
+//components/Mail/Inquiry.jsx
 import {
   Html,
   Head,
-  Preview,
   Tailwind,
   Body,
   Container,
@@ -9,60 +9,48 @@ import {
   Text,
   Heading,
   Img,
+  Preview,
 } from "@react-email/components";
 import * as React from "react";
 
-export default function InquiryConfirmation({ name, email, phone, message }) {
-  const currentYear = new Date().getFullYear();
+export default function Inquiry({ name, email, phone, message }) {
+  const year = new Date().getFullYear();
 
   return (
     <Html>
-      <Head />
-      <Preview>Inquiry Received from Contact Form</Preview>
       <Tailwind>
-        <Body className="bg-gray-100 font-sans p-5 rounded-lg max-w-lg mx-auto">
-          <Container className="mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-            {/* Logo */}
-            <Section className="bg-gray-800 text-center py-6">
+        <Head />
+        <Preview>New Inquiry from Website</Preview>
+        <Body className="bg-gray-100 font-sans p-5">
+          <Container className="bg-white shadow rounded-lg">
+            <Section className="text-center py-4 bg-gray-800">
               <Img
-                src="https://gaprecruitment.co.ke/logo.png"
-                alt="Gap Recruitment Logo"
-                width="80"
-                height="auto"
+                src="http://161.35.16.36/logo.png"
+                alt="Gap Recruitment"
+                width="100"
                 className="mx-auto"
               />
             </Section>
-
-            {/* Header */}
-            <Section className="text-center p-6">
-              <Heading as="h2" className="text-2xl font-bold text-gray-800 m-0">
+            <Section className="p-6">
+              <Heading className="text-xl font-bold text-gray-800">
                 Inquiry Details
               </Heading>
+              <Text>
+                <strong>Name:</strong> {name}
+              </Text>
+              <Text>
+                <strong>Email:</strong> {email}
+              </Text>
+              <Text>
+                <strong>Phone:</strong> {phone}
+              </Text>
+              <Text>
+                <strong>Message:</strong> {message}
+              </Text>
             </Section>
-
-            {/* Inquiry Details */}
-            <Section className="p-6">
-              <div className="text-start text-sm leading-6 space-y-3 text-gray-800">
-                <div>
-                  <Text className="font-semibold inline">Name:</Text> {name}
-                </div>
-                <div>
-                  <Text className="font-semibold inline">Email:</Text> {email}
-                </div>
-                <div>
-                  <Text className="font-semibold inline">Phone:</Text> {phone}
-                </div>
-                <div>
-                  <Text className="font-semibold inline">Message:</Text>{" "}
-                  {message}
-                </div>
-              </div>
-            </Section>
-
-            {/* Footer */}
-            <Section className="bg-gray-800 text-center py-4">
-              <Text className="text-xs text-[#51D4D6] m-0">
-                &copy; {currentYear} G.R.S.L. All rights reserved.
+            <Section className="text-center py-4 bg-gray-800">
+              <Text className="text-xs text-[#51D4D6]">
+                &copy; {year} G.R.S.L. All rights reserved.
               </Text>
             </Section>
           </Container>

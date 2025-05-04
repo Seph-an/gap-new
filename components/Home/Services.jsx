@@ -1,112 +1,6 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
-
-// const Services = () => {
-//   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.8 });
-
-//   return (
-//     <section ref={ref} id="services" className="py-16 bg-gray-100">
-//       <div className="max-w-7xl mx-auto text-center">
-//         {/* Catchy Headline */}
-//         <motion.h2
-//           initial={{ opacity: 0, y: -20 }}
-//           animate={inView ? { opacity: 1, y: 0 } : {}}
-//           transition={{ duration: 0.6, ease: "easeOut" }}
-//           className="text-3xl font-bold text-gray-900"
-//         >
-//           Workforce Solutions That Drive Growth
-//         </motion.h2>
-
-//         {/* Subheadline */}
-//         <motion.p
-//           initial={{ opacity: 0, y: -10 }}
-//           animate={inView ? { opacity: 1, y: 0 } : {}}
-//           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-//           className="mt-4 text-lg max-w-3xl mx-auto text-gray-600"
-//         >
-//           From recruitment to payroll and outsourcing, we handle everything so
-//           you can focus on what matters—growing your business.
-//         </motion.p>
-//       </div>
-
-//       {/* Services Grid */}
-//       <motion.div
-//         className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-10 px-4"
-//         initial="hidden"
-//         animate={inView ? "visible" : "hidden"}
-//         variants={{
-//           visible: { transition: { staggerChildren: 0.3 } },
-//         }}
-//       >
-//         {/* Feature 1 */}
-//         <motion.div
-//           className="bg-white overflow-hidden shadow rounded-lg"
-//           variants={{
-//             hidden: { opacity: 0, y: -20 },
-//             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-//           }}
-//         >
-//           <div className="px-4 py-5 sm:p-6">
-//             <h3 className="text-lg font-medium text-gray-900">
-//               Recruitment Services
-//             </h3>
-//             <p className="mt-2 text-sm text-gray-500">
-//               Find the right talent for your organization with our comprehensive
-//               recruitment solutions.
-//             </p>
-//           </div>
-//         </motion.div>
-
-//         {/* Feature 2 */}
-//         <motion.div
-//           className="bg-white overflow-hidden shadow rounded-lg"
-//           variants={{
-//             hidden: { opacity: 0, y: -20 },
-//             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-//           }}
-//         >
-//           <div className="px-4 py-5 sm:p-6">
-//             <h3 className="text-lg font-medium text-gray-900">
-//               Payroll Management
-//             </h3>
-//             <p className="mt-2 text-sm text-gray-500">
-//               Streamline your payroll processes with our efficient and reliable
-//               payroll management services.
-//             </p>
-//           </div>
-//         </motion.div>
-
-//         {/* Feature 3 */}
-//         <motion.div
-//           className="bg-white overflow-hidden shadow rounded-lg"
-//           variants={{
-//             hidden: { opacity: 0, y: -20 },
-//             visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-//           }}
-//         >
-//           <div className="px-4 py-5 sm:p-6">
-//             <h3 className="text-lg font-medium text-gray-900">
-//               Staff Outsourcing
-//             </h3>
-//             <p className="mt-2 text-sm text-gray-500">
-//               Access flexible workforce solutions with our staff outsourcing
-//               services.
-//             </p>
-//           </div>
-//         </motion.div>
-//       </motion.div>
-//     </section>
-//   );
-// };
-
-// export default Services;
-
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -135,26 +29,26 @@ const services = [
 ];
 
 const Services = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.8 });
-
   return (
-    <section ref={ref} id="services" className="section-dark ">
-      <div className="container ">
-        {/* Headline */}
+    <section id="services" className="section-dark">
+      <div className="container">
+        {/* Title */}
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="gap-title"
         >
-          Our services
+          Our Services
         </motion.h2>
 
-        {/* Subheadline */}
+        {/* Subtitle */}
         <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="gap-subtitle"
         >
           We take care of{" "}
@@ -162,11 +56,13 @@ const Services = () => {
           <span className="text-[#51D4D6]">outsourcing</span> so you can focus
           on scaling your business.
         </motion.p>
+
         {/* Services Grid */}
         <motion.div
-          className="grid  grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-16 px-4"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-16 px-4"
+          whileInView="visible"
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          viewport={{ once: true }}
           variants={{
             visible: { transition: { staggerChildren: 0.3 } },
           }}
@@ -177,12 +73,13 @@ const Services = () => {
               key={service.title}
               className="bg-[#1e1e1e] gap-card"
               variants={{
-                hidden: { opacity: 0, y: -20 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.6, delay: index * 0.2 },
-                },
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.2,
               }}
             >
               <h3 className="card-title self-start">{service.title}</h3>
@@ -193,10 +90,12 @@ const Services = () => {
             </motion.a>
           ))}
         </motion.div>
+
         {/* Additional CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
           className="mt-16 text-center"
         >
@@ -216,4 +115,3 @@ const Services = () => {
 };
 
 export default Services;
-// mt-2 text-center text-gray-400

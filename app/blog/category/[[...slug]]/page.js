@@ -14,13 +14,36 @@ export async function generateStaticParams() {
     for (let p = 1; p <= pagination.pageCount; p++) {
       const params = [];
       if (filter !== "all") params.push(filter);
-      if (p > 1)           params.push(p.toString());
+      if (p > 1) params.push(p.toString());
 
       paths.push({ slug: params });
     }
   }
   return paths;
 }
+export const metadata = {
+  title: "Our Blog – Gap Recruitment Services",
+  description:
+    "Latest insights on getting the best talent, HR, payroll, and job tips from a top recruitment firm in Kenya.",
+  openGraph: {
+    title: "Our Blog – Gap Recruitment Services",
+    description:
+      "Latest insights on getting the best talent, HR, payroll, and job tips from a top recruitment firm in Kenya.",
+    url: "https://gaprecruitment.co.ke/blog",
+    type: "website",
+    images: [
+      {
+        url: "https://gaprecruitment.co.ke/assets/about-gap-recrutiment-and-payroll-management-services-in-kenya-get-best-talent.svg",
+        width: 1200,
+        height: 630,
+        alt: "Gap Recruitment Blog",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://gaprecruitment.co.ke/blog",
+  },
+};
 
 const Page = async ({ params }) => {
   const slug = params.slug ?? [];

@@ -1,83 +1,43 @@
-//app/api/gen-regen-sitemap/route.js
-import axios from "axios";
-import { writeFile } from "fs/promises";
-import path from "path";
-import { fetchBlogs } from "@/utils/fetchBlogs";
+// app/api/gen-regen-sitemap/route.js
+import { generateSitemap } from "@/lib/sitemap";
+import { revalidatePath } from "next/cache";
 
-export const staticRoutes = [
-  { page: "/", priority: 1.0, changefreq: "daily" },
-  { page: "about-us", priority: 0.8, changefreq: "weekly" },
-  { page: "contact-us", priority: 0.5, changefreq: "monthly" },
-  { page: "job-seeker", priority: 0.9, changefreq: "weekly" },
-  { page: "frequently-asked-questions", priority: 0.9, changefreq: "weekly" },
-  { page: "payroll-management", priority: 0.9, changefreq: "weekly" },
-  { page: "recruitment-services", priority: 0.9, changefreq: "weekly" },
-  { page: "staff-outsourcing", priority: 0.9, changefreq: "weekly" },
-  { page: "terms-of-service", priority: 0.4, changefreq: "monthly" },
-  { page: "privacy-policy", priority: 0.4, changefreq: "monthly" },
-  { page: "cookie-policy", priority: 0.4, changefreq: "monthly" },
-  { page: "blog", priority: 0.9, changefreq: "weekly" },
-];
+export async function POST(request) {
+  const secret = request.headers.get("x-webhook-secret");
+  if (secret !== process.env.WEBHOOK_SECRET) {
+    return new Response("Unauthorized", { status: 401 });
+  }
 
-export async function POST() {
-  const siteUrl = "https://domain-name.co.ke";
   try {
-    // 1. Build static entries
-    const staticEntries = staticRoutes.map(({ page, priority, changefreq }) => {
-      const loc = page === "/" ? siteUrl : `${siteUrl}/${page}`;
-      return `
-        <url>
-          <loc>${loc}</loc>
-          <changefreq>${changefreq}</changefreq>
-          <priority>${priority.toFixed(1)}</priority>
-        </url>`;
-    });
+    const body = await request.json();
+    const model =
+      body?.model ||
+      body?.model_uid ||
+      body?.model_uid?.split("::")?.[1]?.split(".")?.[0];
 
-    // 2. Fetch all blog posts in one go (or paginate if necessary)
-    //    Here we set pageSize to a large number to get everything.
-    const allBlogs = await fetchBlogs({
-      filter: "all",
-      page: 1,
-      featured: false,
-      pageSize: 100,
-    });
+    if (model !== "blog") {
+      return new Response("Ignored non-blog event", { status: 204 });
+    }
 
-    // 3. Build <url> for each post
-    const blogConfig = staticRoutes.find((r) => r.page === "blog");
-    const blogEntries = allBlogs.map((post) => {
-      const slug = post.attributes.slug;
-      const lastmod = new Date(post.attributes.updatedAt).toISOString();
-      return `
-        <url>
-          <loc>${siteUrl}/blog/${slug}</loc>
-          <lastmod>${lastmod}</lastmod>
-          <changefreq>${blogConfig.changefreq}</changefreq>
-          <priority>${blogConfig.priority.toFixed(1)}</priority>
-        </url>`;
-    });
-    // 4. Assemble XML
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${[...staticEntries, ...blogEntries].join("\n")}
-    </urlset>`;
+    const slug = body?.entry?.slug;
 
-    // 5. Write to public/
-    const filePath = path.join(process.cwd(), "public", "sitemap.xml");
-    await writeFile(filePath, sitemapXml, "utf8");
+    // Ping Google when it's a live update
+    await generateSitemap({ pingGoogle: true });
 
-    // 6. Ping Google
-    await axios.get(
-      `https://www.google.com/ping?sitemap=${siteUrl}/sitemap.xml`
-    );
+    if (slug) {
+      await revalidatePath(`/blog/${slug}`);
+    }
+    await revalidatePath("/blog");
+    await revalidatePath("/");
 
     return new Response(
-      JSON.stringify({ message: "Sitemap regenerated and Google notified" }),
+      JSON.stringify({ message: "Sitemap regenerated and pages revalidated" }),
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error generating sitemap:", error);
+    console.error("Webhook error:", error);
     return new Response(
-      JSON.stringify({ message: "Error generating sitemap" }),
+      JSON.stringify({ message: "Failed to process webhook" }),
       { status: 500 }
     );
   }

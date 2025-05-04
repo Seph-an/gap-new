@@ -7,7 +7,8 @@ import { notFound } from "next/navigation";
 const BlogCards = async () => {
   const allPostsData = await fetchBlogs({
     filter: "all",
-    pageSize: 20, // Fetch enough posts to have enough to filter from
+    pageSize: 7,
+    featured: true,
     page: 1,
   });
   // Normalize the posts array depending on build/runtime

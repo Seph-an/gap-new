@@ -106,8 +106,9 @@ const HeroSection = () => {
                 delay: 0,
               }}
             >
-              Payroll,
+              Recruitment,
             </motion.span>{" "}
+            Staff{" "}
             <motion.span
               className="text-[#51D4D6] inline-block"
               animate={{ opacity: [1, 0.85, 0.6, 0.85, 1] }}
@@ -118,9 +119,9 @@ const HeroSection = () => {
                 delay: 4,
               }}
             >
-              Recruitment,
+              Outsourcing,
             </motion.span>{" "}
-            and Staff{" "}
+            and{" "}
             <motion.span
               className="text-[#51D4D6] inline-block"
               animate={{ opacity: [1, 0.85, 0.6, 0.85, 1] }}
@@ -131,7 +132,7 @@ const HeroSection = () => {
                 delay: 8,
               }}
             >
-              Outsourcing
+              Payroll
             </motion.span>{" "}
             Solutions
           </motion.h1>
@@ -141,7 +142,7 @@ const HeroSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
-            className="page-subheader"
+            className="mt-6 text-lg md:text-xl text-white font-medium"
           >
             Streamline Your Hiring Process, Simplify Payroll, and Scale Your
             Workforce with Our Expert Services.

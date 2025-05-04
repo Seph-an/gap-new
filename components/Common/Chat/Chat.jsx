@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { MessagesSquare } from "lucide-react";
-import useStore from "@lib/store";
+import useStore from "@/lib/store";
 
 const Chat = () => {
   const toggleVisibilityChatOptions = useStore(
@@ -35,20 +35,20 @@ const Chat = () => {
 
   return (
     <div
-      className={`z-[50] fixed text-primary ${bottom} w-fit right-2 gap-2 flex flex-col items-center`}
+      className={`cursor-pointer z-[50] fixed ${bottom} w-fit right-2 gap-2 flex flex-col items-center`}
     >
       {isVisibleChat && (
         <>
           <div
             onClick={handleClick}
-            className="p-2 bg-tertiary rounded-full shadow-lg"
+            className="p-2 md:p-3 bg-[#51d4d6] rounded-full shadow-lg"
           >
-            <MessagesSquare color="#16a34a" size={36} strokeWidth={1} />
+            <MessagesSquare color="#0a0a0a" size={36} strokeWidth={1} />
           </div>
 
-          <span className="text-xs sm:text-sm text-center">
+          <span className="text-[#51D4D6] text-xs sm:text-sm text-center">
             Hey 🖐,
-            <br /> Let's chat!
+            <br /> Inquire here!
           </span>
         </>
       )}
