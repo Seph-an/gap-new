@@ -58,7 +58,6 @@ export default function HeroSection() {
             alt="outsourcing-staff-for-efficiency-and-speed-in-nairobi"
             width={400}
             height={300}
-            priority
             sizes="(max-width: 600px) 100%, (max-width: 1200px) 500px, 33vw"
             className="mx-auto w-full"
           />

@@ -26,6 +26,7 @@ const ClientsMarquee = () => {
               alt={client.tag}
               width={150}
               height={80}
+	      sizes="150px"
               className="mx-5 rounded-md  transition-all"
             />
           ))}

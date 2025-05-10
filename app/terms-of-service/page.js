@@ -5,6 +5,10 @@ export const metadata = {
   alternates: {
     canonical: "https://gaprecruitment.co.ke/terms-of-service",
   },
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: "Terms of Service | Gap Recruitment Services",
     description:

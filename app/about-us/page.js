@@ -6,6 +6,10 @@ export const metadata = {
   title: "About Us | Recruitment, Payroll & Outsourcing Experts",
   description:
     "Learn more about our mission, values, and team. We specialize in recruitment, payroll, and outsourcing solutions tailored for businesses in Africa and beyond.",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "About recruitment company",
     "HR outsourcing firm",
@@ -68,9 +72,11 @@ export function generateAboutPageSchema() {
         },
       ],
       sameAs: [
-        "https://www.linkedin.com/company/yourcompany",
-        "https://twitter.com/yourcompany",
-      ],
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
       address: {
         "@type": "PostalAddress",
         streetAddress: "Suite A104, Madonna House Annex",

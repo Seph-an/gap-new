@@ -11,7 +11,7 @@ const ChatFirst = () => {
       </div>
       <div className=" flex flex-col items-center font-medium gap-2 pt-8">
         <Link
-          href="#"
+          href="https://wa.me/message/AV3EUFWJXRSJK1"
           className="w-4/5 p-3 bg-[#51D4D6] text-[#0a0a0a] rounded-[0.325rem] text-center"
         >
           Let's chat on Whatsapp!

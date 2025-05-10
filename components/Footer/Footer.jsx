@@ -73,7 +73,7 @@ export default function Footer() {
               <a className={footerLink} href="/blog">
                 Blog
               </a>
-              <a className={footerLink} href="#">
+ <a className={footerLink} href="https://www.careers-page.com/gaprecruitment">
                 Jobs
               </a>
             </div>
@@ -84,7 +84,7 @@ export default function Footer() {
             <div>
               <h3 className={footerTitle}>Connect with us</h3>
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href="#" className={socialIconWrapperStyle}>
+                <a href="https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/twitter.png"
@@ -95,7 +95,7 @@ export default function Footer() {
                   />
                 </a>
 
-                <a href="#" className={socialIconWrapperStyle}>
+                <a href="https://www.facebook.com/share/18jZ4dS8k2/" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/facebook.png"
@@ -105,17 +105,17 @@ export default function Footer() {
                     className={socialImgStyle}
                   />
                 </a>
-                <a href="#" className={socialIconWrapperStyle}>
+		 <a href="https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
-                    src="/socials/whatsapp.png"
-                    alt="WhatsApp"
+                    src="/socials/instagram.png"
+                    alt="Instagram"
                     width={socialImg}
                     height={socialImg}
                     className={socialImgStyle}
                   />
                 </a>
-                <a href="#" className={socialIconWrapperStyle}>
+                <a href="https://www.linkedin.com/company/gaprecruitmentserviceslimited/" className={socialIconWrapperStyle}>
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/linkedin.png"

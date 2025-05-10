@@ -8,6 +8,10 @@ export const metadata = {
     "Recruitment Services in Kenya & East Africa | Gap Recruitment Services",
   description:
     "Find top talent faster with our recruitment services in Kenya and East Africa. From executive search to volume hiring, we deliver results.",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "recruitment services Kenya",
     "staffing Nairobi",
@@ -57,6 +61,12 @@ const recruitmentSchema = {
     addressLocality: "Nairobi",
     addressCountry: "KE",
   },
+  sameAs: [
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
   areaServed: [
     {
       "@type": "Country",

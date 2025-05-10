@@ -7,6 +7,10 @@ export const metadata = {
   title: "Payroll Management Services in Kenya & East Africa | Gap Recruitment",
   description:
     "Streamline your payroll processes with expert payroll management services tailored for businesses in Kenya and East Africa. We ensure compliance, accuracy, and timely salary processing.",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "Payroll management Kenya",
     "Outsourced payroll East Africa",
@@ -83,6 +87,12 @@ export function generatePayrollSchema() {
       addressLocality: "Nairobi",
       addressCountry: "KE",
     },
+    sameAs: [
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
     areaServed: [
       { "@type": "Country", name: "Kenya" },
       { "@type": "Country", name: "Uganda" },

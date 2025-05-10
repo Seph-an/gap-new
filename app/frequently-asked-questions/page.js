@@ -4,6 +4,10 @@ import { faqs } from "@/components/FAQs/faqs";
 
 export const metadata = {
   title: "Frequently Asked Questions (FAQ) | Gap Recruitment Services",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "FAQ recruitment company",
     "FAQ recruitment company in Nairobi",
@@ -47,6 +51,12 @@ export function generateFAQSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+     sameAs: [
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,

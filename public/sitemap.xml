@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+      <url>
+        <loc>https://gaprecruitment.co.ke</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/about-us</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/contact-us</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/job-seeker</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/frequently-asked-questions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/payroll-management</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/recruitment-services</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/staff-outsourcing</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/terms-of-service</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/privacy-policy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/cookie-policy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/blog</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/blog/payroll-management-africa-smes-2025</loc>
+        <lastmod>2025-04-26T17:52:47.315Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/blog/future-proof-hiring-ai-potential-2025</loc>
+        <lastmod>2025-04-26T17:57:24.564Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/blog/top-recruitment-strategies-2025</loc>
+        <lastmod>2025-04-26T18:00:52.111Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+
+      <url>
+        <loc>https://gaprecruitment.co.ke/blog/africa-global-remote-work-hub-2025</loc>
+        <lastmod>2025-04-26T19:43:04.423Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+      </url>
+  </urlset>

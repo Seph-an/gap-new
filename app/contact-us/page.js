@@ -5,6 +5,10 @@ export const metadata = {
   title: "Contact Us | Recruitment, Payroll & Outsourcing Experts",
   description:
     "Get in touch with our team of recruitment, payroll, and outsourcing specialists. We're here to support your business growth with tailored HR solutions.",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "Contact recruitment company",
     "Contact recruitment company in Nairobi",
@@ -111,7 +115,7 @@ export default async function ContactPage() {
           __html: JSON.stringify(generateContactPageSchema()),
         }}
       />
-      <section className="relative min-h-screen flex items-center justify-center py-16 px-6 md:px-16">
+      <section className="bg-[#0a0a0a] relative min-h-screen flex items-center justify-center py-16 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-6 lg:mt-20">
           {/* Left Column */}
           <div className="md:w-1/3">

@@ -88,7 +88,6 @@ const BlogHome = ({ filter, page, blogPosts, pagination, categories }) => {
                   blogPosts.map((post) => (
                     <div
                       key={post.slug}
-                      className="bg-[#1e1e1e] p-4 rounded-lg shadow-md"
                     >
                       <BlogPost post={post} filter={filter} page={page} />
                     </div>

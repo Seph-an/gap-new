@@ -2,7 +2,6 @@ import Hero from "../components/Home/Hero";
 import Why from "../components/Home/Why";
 import Services from "../components/Home/Services";
 import FeaturedBlogs from "../components/Blog/Featured/FeaturedBlogs";
-import Script from "next/script";
 
 export const metadata = {
   title:
@@ -54,51 +53,56 @@ export const metadata = {
     follow: true,
   },
 };
+export function generateHomeSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Gap Recruitment Services",
+    url: "https://www.gaprecruitment.co.ke",
+    logo: "https://www.gaprecruitment.co.ke/logo.png",
+    description:
+      "Leading recruitment and HR outsourcing agency in Kenya providing payroll management, contract staffing, and workforce solutions across Africa.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Suite A104 Madonna House Annex, Westlands Road",
+      addressLocality: "Nairobi",
+      addressRegion: "Nairobi County",
+      postalCode: "1004 - 00606, Sarit Centre",
+      addressCountry: "KE",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+254-784-155-512",
+      contactType: "Customer Service",
+      areaServed: ["KE", "UG", "TZ", "NG", "ZA"],
+      availableLanguage: ["English", "Swahili"],
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
+  };
+}
 
 export default function Home() {
   return (
     <>
-      <Script
-        id="ld-json-org"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Gap Recruitment Services",
-            url: "https://www.gaprecruitment.co.ke",
-            logo: "https://www.gaprecruitment.co.ke/logo.png",
-            description:
-              "Leading recruitment and HR outsourcing agency in Kenya providing payroll management, contract staffing, and workforce solutions across Africa.",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Suite A104 Madonna House Annex, Westlands Road",
-              addressLocality: "Nairobi",
-              addressRegion: "Nairobi County",
-              postalCode: "1004 - 00606, Sarit Centre",
-              addressCountry: "KE",
-            },
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+254-784-155-512",
-              contactType: "Customer Service",
-              areaServed: ["KE", "UG", "TZ", "NG", "ZA"],
-              availableLanguage: ["English", "Swahili"],
-            },
-            sameAs: [
-              "https://www.linkedin.com/company/gap-recruitment-services",
-              "https://www.facebook.com/GapRecruitmentServices",
-            ],
-          }),
-        }}
-      />
+	  <script
+        	type="application/ld+json"
+	        strategy="afterInteractive"
+        	dangerouslySetInnerHTML={{
+	        __html: JSON.stringify(generateHomeSchema()),
+	        }}
+      	/>
       <div>
-        <Hero />
-        <Why />
-        <Services />
-        <FeaturedBlogs />
+	<Hero />
+	<Why />
+	<Services />
+	<FeaturedBlogs/>
       </div>
     </>
   );
 }
+

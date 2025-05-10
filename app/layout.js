@@ -15,29 +15,34 @@ import CookieAlert from "@/components/Common/CookieAlert";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Tell Next your real site URL at build time:
+export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL);
+
 export const metadata = {
   title: "Gap Recruitment",
   description: "Recruitment services and career support in Kenya",
+scripts: [
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=G-06R4RXHDRL",
+      strategy: "afterInteractive",
+    },
+    {
+      id: "google-analytics",
+      strategy: "afterInteractive",
+      // Note: `innerHTML` is how you inject the gtag config block
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-06R4RXHDRL');
+      `,
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Tag: Replace with your Measurement ID */}
-        {/* <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-06R4RXHDRL`}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-06R4RXHDRL');
-          `}
-        </Script> */}
-      </head>
       <body className={`${inter.className} antialiased`}>
         <Providers>
           <main>
@@ -47,7 +52,7 @@ export default function RootLayout({ children }) {
             <Chat />
             <ChatOptions />
             <Top />
-            <CookieAlert />
+	    <CookieAlert />
           </main>
         </Providers>
       </body>

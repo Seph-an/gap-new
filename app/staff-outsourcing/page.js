@@ -8,6 +8,10 @@ export const metadata = {
     "Staff Outsourcing Services in Kenya & East Africa | Gap Recruitment Services",
   description:
     "Reliable staff outsourcing services tailored for businesses in Kenya and East Africa. Scale your workforce with flexibility, compliance, and expert management.",
+icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+  },
   keywords: [
     "Staff outsourcing Kenya",
     "Outsourced staffing East Africa",
@@ -84,6 +88,12 @@ export function generateOutsourcingSchema() {
       addressLocality: "Nairobi",
       addressCountry: "KE",
     },
+     sameAs: [
+      "https://www.linkedin.com/company/gaprecruitmentserviceslimited/",
+      "https://www.facebook.com/share/18jZ4dS8k2/",
+      "https://www.instagram.com/gap_recruitment",
+      "https://x.com/GapLimited",
+    ],
     areaServed: [
       { "@type": "Country", name: "Kenya" },
       { "@type": "Country", name: "Uganda" },

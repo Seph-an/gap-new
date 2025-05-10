@@ -40,7 +40,6 @@ const Navbar = () => {
             <Image
               src="/logo.webp"
               alt="Gap Recruitment Services, Payroll Management and Workforce Outsourcing Logo"
-              priority
               width={250}
               height={250}
               className="w-[100px] lg:w-[120px] object-contain"

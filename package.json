@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development next dev --turbopack",
     "build": "NODE_ENV=production next build",
-    "postbuild": "NODE_ENV=production node scripts/generate-sitemap.js",
+    "postbuild": "NODE_ENV=production node -r dotenv/config scripts/generate-sitemap.js",
     "start": "NODE_ENV=production next start",
     "lint": "next lint"
   },

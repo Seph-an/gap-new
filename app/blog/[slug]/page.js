@@ -80,7 +80,7 @@ const Page = async ({ params }) => {
         url: "https://gaprecruitment.co.ke/logo.png",
       },
     },
-    url: `https://your-domain.com/blog/${post.slug}`,
+    url: `https://gaprecruitment.co.ke/blog/${post.slug}`,
     datePublished: post.createdAt,
     dateModified: post.updatedAt,
   };

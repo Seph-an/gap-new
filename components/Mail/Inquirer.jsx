@@ -25,7 +25,7 @@ export default function GapRecruitmentInquiry({ name, role }) {
             <Section className="bg-gray-800 py-3">
               <div className="flex justify-center items-center space-x-2">
                 <Img
-                  src="http://161.35.16.36/logo.png"
+                  src="https://gaprecruitment.co.ke/logo.png"
                   alt="Gap Recruitment Logo"
                   width="100"
                   height="auto"
@@ -36,7 +36,7 @@ export default function GapRecruitmentInquiry({ name, role }) {
 
             {/* Main Content */}
             <Section className="text-center  bg-white relative flex flex-col items-center justify-center">
-              <div className="flex flex-col items-center justify-center py-4">
+              <div className="flex flex-col items-center justify-center p-4">
                 {/* Heading */}
                 <Text className="text-2xl font-bold text-[#1E2939]">
                   Thanks for your inquiry,{" "}
@@ -45,7 +45,7 @@ export default function GapRecruitmentInquiry({ name, role }) {
 
                 {/* Checkmark */}
                 <Img
-                  src="http://161.35.16.36/checkmark.png"
+                  src="https://gaprecruitment.co.ke/checkmark.png"
                   alt="Check-mark-for-inquiry-received"
                   width="100"
                   height="auto"

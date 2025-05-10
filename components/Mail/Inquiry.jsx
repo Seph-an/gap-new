@@ -21,21 +21,22 @@ export default function Inquiry({ name, email, phone, message }) {
       <Tailwind>
         <Head />
         <Preview>New Inquiry from Website</Preview>
-        <Body className="bg-gray-100 font-sans p-5">
-          <Container className="bg-white shadow rounded-lg">
-            <Section className="text-center py-4 bg-gray-800">
+        <Body className="bg-green-100 font-sans rounded-xl max-w-lg">
+          <Container className="bg-white mx-auto rounded-xl shadow-md overflow-hidden">
+            <Section className="bg-gray-800 py-3">
               <Img
-                src="http://161.35.16.36/logo.png"
+                src="https://gaprecruitment.co.ke/logo.png"
                 alt="Gap Recruitment"
                 width="100"
-                className="mx-auto"
+                className="mx-auto py-4"
               />
             </Section>
-            <Section className="p-6">
-              <Heading className="text-xl font-bold text-gray-800">
-                Inquiry Details
-              </Heading>
-              <Text>
+            <Section className="text-center  bg-white relative flex flex-col items-center justify-center">
+		<div className="flex flex-col justify-center py-4 px-6">
+		 <Heading className="text-lg font-bold text-gray-800">
+                  Inquiry details
+                 </Heading>
+               <Text>
                 <strong>Name:</strong> {name}
               </Text>
               <Text>
@@ -47,8 +48,9 @@ export default function Inquiry({ name, email, phone, message }) {
               <Text>
                 <strong>Message:</strong> {message}
               </Text>
+		</div>
             </Section>
-            <Section className="text-center py-4 bg-gray-800">
+            <Section className="text-center py-6 bg-gray-800">
               <Text className="text-sm text-[#51D4D6]">
                 &copy; {year} G.R.S.L. All rights reserved.
               </Text>

@@ -10,7 +10,6 @@ const GapAd = ({ pagination }) => {
       } grow flex flex-col gap-16 md:gap-12  min-w-[300px] pt-5`}
     >
       <Image
-        priority
         src="/assets/blog-page-about-jobs-in-kenya-jobs-in-nairobi-recruitment-payroll-services-and-workforce-outsourcing.svg"
         alt="blog-page-about-jobs-in-kenya-jobs-in-nairobi-recruitment-payroll-services-and-workforce-outsourcing"
         width={300}
@@ -37,7 +36,7 @@ const GapAd = ({ pagination }) => {
           your business in today's work landscape!
         </h2>
         <Link
-          href="/home#services"
+          href="/#services"
           className="w-fit gap-button gap-button-primary"
         >
           Explore solutions
