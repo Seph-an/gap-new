@@ -1,4 +1,4 @@
-// app/blog/[[...slug]]/page.js
+// app/blog/category/[[...slug]]/page.js
 
 import BlogHome from "@/components/Blog/Home/BlogHome";
 import { fetchBlogs, fetchCategories } from "@/utils/fetchBlogs";
@@ -8,16 +8,9 @@ export async function generateStaticParams() {
   const allFilters = ["all", ...categories.map((cat) => cat.Title)];
   const paths = [];
   for (const filter of allFilters) {
-    const blogsData = await fetchBlogs({ filter, page: 1 });
-    const { pagination } = blogsData.meta;
-
-    for (let p = 1; p <= pagination.pageCount; p++) {
-      const params = [];
-      if (filter !== "all") params.push(filter);
-      if (p > 1) params.push(p.toString());
-
-      paths.push({ slug: params });
-    }
+    const params = [];
+    if (filter !== "all") params.push(filter);
+    paths.push({ slug: params });
   }
   return paths;
 }
@@ -45,10 +38,13 @@ export const metadata = {
   },
 };
 
-const Page = async ({ params }) => {
+const Page = async (props) => {
+  const params = await props.params;
+  const searchParams = await props.searchParams;
+
   const slug = params.slug ?? [];
   const filter = slug[0] ?? "all";
-  const page = slug[1] ? parseInt(slug[1], 10) : 1;
+  const page = searchParams.page ? parseInt(searchParams.page, 10) : 1;
 
   const blogsRes = await fetchBlogs({ filter, page });
   const posts = blogsRes.data;

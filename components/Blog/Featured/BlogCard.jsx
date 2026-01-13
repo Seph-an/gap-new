@@ -33,7 +33,7 @@ const BlogCard = ({ post }) => {
       </p>
       <div className=" self-end w-full flex flex-col xl:flex-row justify-between gap-2">
         <span className=" text-sm text-gray-500 font-regular">
-          {timeAgo(post?.createdAt)} - {post?.read_time} mins read
+          {post?.read_time} mins read
         </span>
         <Link href={articleUrl} className="more flex gap-2 items-center ">
           <span className="text-[#51D4D6]">Read more</span>

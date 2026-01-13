@@ -46,7 +46,7 @@ export default function HeroSection() {
               Boost your job search <ArrowRight size={20} className="ml-2" />
             </a>
             <a
-              href="https://www.careers-page.com/gaprecruitment"
+              href="https://jobs.gaprecruitment.co.ke/jobs/Careers"
               className="bg-gray-200 text-[#0a0a0a] px-6 py-3 rounded-lg hover:opacity-90 transition"
             >
               Listed jobs

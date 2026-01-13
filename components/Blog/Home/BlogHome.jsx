@@ -1,4 +1,3 @@
-
 import BlogCTA from "./BlogCTA";
 import Ad from "./Ad";
 import Filter from "./Filter";
@@ -6,6 +5,7 @@ import BlogPost from "./BlogPost";
 import Pagination from "./Pagination";
 
 const BlogHome = ({ filter, page, blogPosts, pagination, categories }) => {
+  console.log("BlogHome component: filter =", filter, ", page =", page);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -46,9 +46,8 @@ const BlogHome = ({ filter, page, blogPosts, pagination, categories }) => {
     })),
   };
 
-
   return (
-<>
+    <>
       <script
         type="application/ld+json"
         suppressHydrationWarning

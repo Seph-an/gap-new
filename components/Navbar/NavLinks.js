@@ -104,7 +104,7 @@ const NavLinks = () => {
         whileTap={{ scale: 0.95 }}
       >
         <Link
-          href="https://www.careers-page.com/gaprecruitment"
+          href="https://jobs.gaprecruitment.co.ke/jobs/Careers"
           className="rounded-md bg-[#51D4D6] px-6 py-3 text-base font-medium text-[#1e1e1e] transition-colors hover:bg-[#3FAFB1]"
         >
           Listed Jobs

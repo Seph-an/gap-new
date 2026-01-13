@@ -5,9 +5,9 @@ export const metadata = {
   title: "Contact Us | Recruitment, Payroll & Outsourcing Experts",
   description:
     "Get in touch with our team of recruitment, payroll, and outsourcing specialists. We're here to support your business growth with tailored HR solutions.",
-icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   keywords: [
     "Contact recruitment company",
@@ -121,7 +121,7 @@ export default async function ContactPage() {
           <div className="md:w-1/3">
             <h2 className="text-3xl font-bold text-white/90">{title}</h2>
             <p className="mt-2 text-gray-400">{description}</p>
-            <InquiryButton />
+            {/* <InquiryButton /> */}
           </div>
 
           {/* Right Column */}

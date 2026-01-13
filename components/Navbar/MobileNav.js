@@ -147,7 +147,7 @@ const MobileNav = ({ setIsOpen }) => {
         {/* Jobs Button */}
         <motion.div variants={itemVariants} className="pt-2">
           <Link
-            href="https://www.careers-page.com/gaprecruitment"
+            href="https://jobs.gaprecruitment.co.ke/jobs/Careers"
             className="bg-[#51D4D6] w-[200px] justify-center inline-flex items-center text-[#0a0a0a] font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity duration-500 ease-in-out"
             onClick={() => setIsOpen(false)}
           >

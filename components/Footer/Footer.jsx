@@ -1,7 +1,7 @@
 // <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Indygo - Flaticon</a>
 
 import Image from "next/image";
-
+//logo.png
 export default function Footer() {
   const year = new Date().getFullYear();
   const footerTitle = "text-center md:text-left text-lg font-semibold mb-4";
@@ -73,7 +73,10 @@ export default function Footer() {
               <a className={footerLink} href="/blog">
                 Blog
               </a>
- <a className={footerLink} href="https://www.careers-page.com/gaprecruitment">
+              <a
+                className={footerLink}
+                href="https://jobs.gaprecruitment.co.ke/jobs/Careers"
+              >
                 Jobs
               </a>
             </div>
@@ -84,7 +87,10 @@ export default function Footer() {
             <div>
               <h3 className={footerTitle}>Connect with us</h3>
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href="https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09" className={socialIconWrapperStyle}>
+                <a
+                  href="https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09"
+                  className={socialIconWrapperStyle}
+                >
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/twitter.png"
@@ -95,7 +101,10 @@ export default function Footer() {
                   />
                 </a>
 
-                <a href="https://www.facebook.com/share/18jZ4dS8k2/" className={socialIconWrapperStyle}>
+                <a
+                  href="https://www.facebook.com/share/18jZ4dS8k2/"
+                  className={socialIconWrapperStyle}
+                >
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/facebook.png"
@@ -105,7 +114,10 @@ export default function Footer() {
                     className={socialImgStyle}
                   />
                 </a>
-		 <a href="https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4" className={socialIconWrapperStyle}>
+                <a
+                  href="https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4"
+                  className={socialIconWrapperStyle}
+                >
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/instagram.png"
@@ -115,7 +127,10 @@ export default function Footer() {
                     className={socialImgStyle}
                   />
                 </a>
-                <a href="https://www.linkedin.com/company/gaprecruitmentserviceslimited/" className={socialIconWrapperStyle}>
+                <a
+                  href="https://www.linkedin.com/company/gaprecruitmentserviceslimited/"
+                  className={socialIconWrapperStyle}
+                >
                   <div className={socialIconBackgroundStyle}></div>
                   <Image
                     src="/socials/linkedin.png"
