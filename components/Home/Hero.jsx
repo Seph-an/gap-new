@@ -88,7 +88,7 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-4"
+            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

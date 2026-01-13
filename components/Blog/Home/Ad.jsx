@@ -18,7 +18,7 @@ const GapAd = ({ pagination }) => {
       />
       <div className=" order-1 md:order-2 bg-[#1e1e1e] rounded-lg shadow-sm flex flex-col gap-3  justify-center px-5 py-6">
         <h3 className="pl-2 border-l-2 border-[#51D4D6] font-semibold text-lg text-white/90">
-          Elevate your business
+          Work with Gap
         </h3>
         <h2 className="font-regular text-base mt-2 mb-3 opacity-90">
           Explore our{" "}
@@ -35,10 +35,7 @@ const GapAd = ({ pagination }) => {
           </span>{" "}
           your business in today's work landscape!
         </h2>
-        <Link
-          href="/#services"
-          className="w-fit gap-button gap-button-primary"
-        >
+        <Link href="/#services" className="w-fit gap-button gap-button-primary">
           Explore solutions
           <ArrowRight
             color="#0a0a0a"
