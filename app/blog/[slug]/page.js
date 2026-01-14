@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = await fetchBlog(params.slug);
+  const awaitedParams = await params;
+  const post = await fetchBlog(awaitedParams.slug);
 
   if (!post) {
     return {
@@ -54,7 +55,8 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-  const post = await fetchBlog(params.slug);
+  const awaitedParams = await params;
+  const post = await fetchBlog(awaitedParams.slug);
   if (!post) {
     return notFound();
   }

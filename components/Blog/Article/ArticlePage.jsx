@@ -12,6 +12,10 @@ export default function ArticlePage({ post }) {
   const filter = searchParams.get('filter');
   const page = searchParams.get('page');
 
+  const unescapeMarkdown = (text) => {
+    return text.replace(/\\n/g, '\n').replace(/\\"/g, '"');
+  };
+
   const queryParams = new URLSearchParams();
   if (filter) queryParams.append('filter', filter);
   if (page) queryParams.append('page', page);
@@ -23,14 +27,14 @@ export default function ArticlePage({ post }) {
       <div className="container">
         <div className="max-w-5xl mx-auto my-8">
           <BackButton backUrl={backUrl} />
-          <div className="prose prose-lg text-justify text-gray-300">
+          <div className="prose prose-lg">
             <span className="text-white/90 bg-primary rounded-sm py-2 px-3 text-sm">
               {timeAgo(post.createdAt)} - {post.read_time} mins read
             </span>
             <h1 className="text-white/90 mt-5 mb-8 font-bold text-lg md:text-2xl lg:text-4xl xl:text-5xl">
               {post.title}
             </h1>
-            <ReactMarkdown>{post.article}</ReactMarkdown>
+            <ReactMarkdown>{unescapeMarkdown(post.article)}</ReactMarkdown>
           </div>
           <BackButton backUrl={backUrl} />
         </div>
