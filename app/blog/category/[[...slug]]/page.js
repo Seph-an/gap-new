@@ -44,7 +44,7 @@ const Page = async (props) => {
 
   const slug = params.slug ?? [];
   const filter = slug[0] ?? "all";
-  const page = searchParams.page ? parseInt(searchParams.page, 10) : 1;
+  const page = slug[1] === "page" ? parseInt(slug[2], 10) : 1;
 
   const blogsRes = await fetchBlogs({ filter, page });
   const posts = blogsRes.data;

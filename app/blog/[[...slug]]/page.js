@@ -26,13 +26,14 @@ export const metadata = {
   },
 };
 
-export default async function Page() {
-  const { data, meta } = await fetchBlogs({ filter: "all", page: 1 });
+export default async function Page({ params }) {
+  const page = params.slug && params.slug[0] === "page" ? parseInt(params.slug[1], 10) : 1;
+  const { data, meta } = await fetchBlogs({ filter: "all", page });
   const categories = await fetchCategories();
   return (
     <BlogHome
       filter="all"
-      page={1}
+      page={page}
       blogPosts={data}
       pagination={meta.pagination}
       categories={categories}

@@ -12,7 +12,15 @@ const Pagination = ({ pagination, filter }) => {
         ? "/blog"
         : `/blog/category/${encodeURIComponent(filter)}`;
 
-    return pageNumber === 1 ? basePath : `${basePath}/${pageNumber}`;
+    if (pageNumber === 1) {
+      return basePath;
+    }
+
+    if (filter === "all") {
+      return `${basePath}/page/${pageNumber}`;
+    }
+
+    return `${basePath}/page/${pageNumber}`;
   };
 
   return (
