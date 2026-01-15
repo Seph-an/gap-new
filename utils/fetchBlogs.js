@@ -7,7 +7,7 @@ const IS_SERVER_SIDE = typeof window === "undefined";
 function getBaseURL() {
   if (IS_SERVER_SIDE) {
     // On the server (build time, ISR), use the direct Strapi URL from environment variables.
-    return STRAPI_URL;
+    return STRAPI_URL || "https://gaprecruitment.co.ke";
   }
   // On the client, use relative paths to hit the Next.js proxy API routes.
   return "";

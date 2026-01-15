@@ -1,4 +1,4 @@
-import InquiryButton from "@/components/Contact/InquiryButton";
+
 import CopyableText from "@/components/Common/Copy";
 
 export const metadata = {
