@@ -12,9 +12,7 @@ export default function ArticlePage({ post }) {
   const filter = searchParams.get("filter");
   const page = searchParams.get("page");
 
-  const unescapeMarkdown = (text) => {
-    return text.replace(/\\n/g, "\n").replace(/\\"/g, '"');
-  };
+  
 
   const queryParams = new URLSearchParams();
   if (filter) queryParams.append("filter", filter);
@@ -36,7 +34,7 @@ export default function ArticlePage({ post }) {
             <h1 className="text-white/90 mt-5 mb-8 font-bold text-lg md:text-2xl lg:text-4xl xl:text-5xl">
               {post.title}
             </h1>
-            <ReactMarkdown>{unescapeMarkdown(post.article)}</ReactMarkdown>
+            <ReactMarkdown>{post.article}</ReactMarkdown>
           </div>
           <BackButton backUrl={backUrl} />
         </div>
