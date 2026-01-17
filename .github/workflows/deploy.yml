@@ -19,8 +19,8 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
+          echo "$SSH_KEY" > ~/.ssh/gap-droplet-deploy
+          chmod 600 ~/.ssh/gap-droplet-deploy
           ssh-keyscan -H ${{ secrets.DROPLET_IP }} >> ~/.ssh/known_hosts
           
           # Syncing source code to the fe-gap directory
