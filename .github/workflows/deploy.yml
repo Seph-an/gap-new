@@ -38,8 +38,6 @@ jobs:
             --exclude='.github/' \
             --exclude='node_modules/' \
             --exclude='.cache/' \
-            --exclude='.next/' \
-            --exclude='build/' \
             ./ ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_IP }}:~/fe-gap
 
       # 6. Build and Reload on the Droplet
