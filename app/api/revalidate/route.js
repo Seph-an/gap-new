@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { timingSafeEqual } from "crypto";
 
 export async function POST(request) {
-  const secret = request.headers.get("x-strapi-secret");
+  const secret = request.headers.get("x-strapi-signature");
   const strapiWebhookSecret = process.env.STRAPI_WEBHOOK_SECRET;
 
   if (!secret || !strapiWebhookSecret) {
@@ -31,7 +31,6 @@ export async function POST(request) {
 
   try {
     const body = await request.json();
-    console.log("Received webhook payload:", body);
 
     const { model, entry } = body;
 
@@ -50,7 +49,6 @@ export async function POST(request) {
       }
       revalidateTag("category");
 
-
       console.log(`Revalidated blog post: ${entry.slug}`);
       return NextResponse.json({ revalidated: true, now: Date.now() });
     }
@@ -64,4 +62,3 @@ export async function POST(request) {
     );
   }
 }
-
