@@ -12,7 +12,7 @@ const HeroSection = () => {
         src="/assets/gap-bg.webp"
         alt="Hero Background"
         fill
-	sizes="100vw"
+        sizes="100vw"
         className="absolute inset-0 z-5"
       />
 
@@ -105,7 +105,7 @@ const HeroSection = () => {
             </motion.a>
 
             <motion.a
-              href="/job-seekers"
+              href="/job-seeker"
               className="gap-button gap-button-light"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -132,111 +132,6 @@ const HeroSection = () => {
             className="mx-auto w-full"
           />
         </motion.div>
-
-        {/* <div className="flex flex-col gap-4 max-w-2xl text-center lg:text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="page-header"
-          >
-            <motion.span
-              className="text-[#51D4D6] inline-block"
-              animate={{ opacity: [1, 0.4, 1] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0,
-              }}
-            >
-              Payroll,
-            </motion.span>{" "}
-            <motion.span
-              className="text-[#51D4D6] inline-block"
-              animate={{ opacity: [1, 0.4, 1] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1.5, // starts when Payroll ends
-              }}
-            >
-              Recruitment,
-            </motion.span>{" "}
-            and Staff{" "}
-            <motion.span
-              className="text-[#51D4D6] inline-block"
-              animate={{ opacity: [1, 0.4, 1] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 3, // starts after Recruitment
-              }}
-            >
-              Outsourcing
-            </motion.span>{" "}
-            Solutions
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="page-subheader"
-          >
-            Streamline Your Hiring Process, Simplify Payroll, and Scale Your
-            Workforce with Our Expert Services.
-          </motion.p>
-          <motion.div
-            className="mt-8 flex flex-col sm:flex-row gap-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              visible: {},
-            }}
-          >
-            <motion.a
-              href="#services"
-              className="flex items-center gap-2 gap-button gap-button-primary"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            >
-              Recruit. Outsource. Pay <ArrowRight size={20} />
-            </motion.a>
-
-            <motion.a
-              href="/job-seekers"
-              className="gap-button gap-button-light"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-            >
-              Jobseekers
-            </motion.a>
-          </motion.div>
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          className="w-full max-w-md lg:max-w-lg"
-        >
-          <Image
-            src="/assets/outsourcing-staff-for-efficiency-and-speed.svg"
-            alt="outsourcing-staff-for-efficiency-and-speed"
-            width={400}
-            height={300}
-            sizes="(max-width: 600px) 100%, (max-width: 1200px) 500px, 33vw"
-            className="mx-auto w-full"
-          />
-        </motion.div> */}
       </div>
     </section>
   );
