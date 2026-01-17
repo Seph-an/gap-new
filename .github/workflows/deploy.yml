@@ -40,9 +40,6 @@ jobs:
             --exclude='.cache/' \
             --exclude='.next/' \
             --exclude='build/' \
-            --exclude='.env' \
-            --exclude='.tmp/' \
-            --exclude='public/uploads/' \
             ./ ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_IP }}:~/fe-gap
 
       # 6. Build and Reload on the Droplet
