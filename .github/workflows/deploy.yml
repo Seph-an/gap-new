@@ -9,20 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Pull the code from GitHub
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 2. Deploy raw source files to Droplet via Rsync
       - name: Deploy Source via Native Rsync
-        env:
-          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        shell: bash
         run: |
+          # 1. Prepare SSH directory
           mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/gap-droplet-deploy
+          
+          # 2. Safely write the key (prevents newline/format issues)
+          cat <<EOF > ~/.ssh/gap-droplet-deploy
+          ${{ secrets.SSH_PRIVATE_KEY }}
+          EOF
+          
           chmod 600 ~/.ssh/gap-droplet-deploy
+          
+          # 3. Scan host fingerprint
           ssh-keyscan -H ${{ secrets.DROPLET_IP }} >> ~/.ssh/known_hosts
 
+          # 4. Ensure the target directory exists on the Droplet
+          ssh -i ~/.ssh/gap-droplet-deploy ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_IP }} "mkdir -p ~/fe-gap"
+
+          # 5. Execute Rsync
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/gap-droplet-deploy -o StrictHostKeyChecking=no" \
             --exclude='.git/' \
@@ -36,7 +45,6 @@ jobs:
             --exclude='public/uploads/' \
             ./ ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_IP }}:~/fe-gap
 
-      # 3. Build and Start on the Droplet
       - name: Remote Build and Restart
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -44,19 +52,8 @@ jobs:
           username: ${{ secrets.DROPLET_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # 1. Load Node environment (using your specific v22 path)
             export PATH=$PATH:/home/grsl/.nvm/versions/node/v22.14.0/bin
-            
-            # 2. Navigate to project directory
             cd ~/fe-gap
-            
-            # 3. Install ALL dependencies (required to run the 'build' command)
             npm install
-            
-            # 4. Run the build on the Droplet
-            # This allows Next.js to talk to Strapi via localhost during build time
             NODE_ENV=production npm run build
-            
-            # 5. Restart via PM2
-            # Using the process name 'fe-gap'
             pm2 restart fe-gap || pm2 start npm --name "fe-gap" -- start
