@@ -16,17 +16,15 @@ jobs:
       # 2. Deploy raw source files to Droplet via Rsync
       - name: Deploy Source via Native Rsync
         env:
-          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/gap-droplet-deploy
           chmod 600 ~/.ssh/gap-droplet-deploy
           ssh-keyscan -H ${{ secrets.DROPLET_IP }} >> ~/.ssh/known_hosts
-          
-          # Syncing source code to the fe-gap directory
-          # We exclude build artifacts to ensure a clean build on the server
+
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            -e "ssh -i ~/.ssh/gap-droplet-deploy -o StrictHostKeyChecking=no" \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='node_modules/' \
