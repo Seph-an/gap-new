@@ -75,7 +75,7 @@ export default function Footer() {
               </a>
               <a
                 className={footerLink}
-                href="https://www.careers-page.com/gaprecruitment"
+                href="https://gaprecruitment.careers-page.com"
               >
                 Jobs
               </a>
