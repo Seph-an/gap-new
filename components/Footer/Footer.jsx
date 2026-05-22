@@ -187,7 +187,7 @@ export default function Footer() {
           <p className="text-sm text-white/90 mt-2">
             Developed by{" "}
             <a
-              href="https://sephanly.com"
+              href="https://dev.sephan.co.ke"
               className="underline font-medium text-[#51D4D6]"
             >
               Sephanly
