@@ -21,29 +21,24 @@ export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL);
 export const metadata = {
   title: "Gap Recruitment",
   description: "Recruitment services and career support in Kenya",
-scripts: [
-    {
-      src: "https://www.googletagmanager.com/gtag/js?id=G-06R4RXHDRL",
-      strategy: "afterInteractive",
-    },
-    {
-      id: "google-analytics",
-      strategy: "afterInteractive",
-      // Note: `innerHTML` is how you inject the gtag config block
-      innerHTML: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-06R4RXHDRL');
-      `,
-    },
-  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZKZEDN5QG4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZKZEDN5QG4');
+          `}
+        </Script>
         <Providers>
           <main>
             <Navbar />
