@@ -6,7 +6,7 @@ import InternationalBanner from "../../components/Recruitment/InternationalBanne
 
 export const metadata = {
   title:
-    "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
+    "Leading Recruitment Company in Nairobi, Kenya | Gap Recruitment Services Limited",
   description:
     "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
 icons: {
@@ -22,7 +22,7 @@ icons: {
     "Kenyan recruitment agency",
   ],
   openGraph: {
-    title: "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
+    title: "Leading Recruitment Company in Nairobi, Kenya | Gap Recruitment Services Limited",
     description:
       "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
     url: "https://gaprecruitment.co.ke/recruitment-services",
@@ -35,7 +35,7 @@ icons: {
     images: [
       "https://gaprecruitment.co.ke/assets/hire-best-talent-with-our-expert-recruitment-services-in-nairobi.svg",
     ],
-    title: "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
+    title: "Leading Recruitment Company in Nairobi, Kenya | Gap Recruitment Services Limited",
     description:
       "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
   },

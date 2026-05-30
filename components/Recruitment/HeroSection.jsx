@@ -16,7 +16,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="page-header"
           >
-            Premier <span className="text-[#51D4D6]">Recruitment Company</span> in
+            Experienced <span className="text-[#51D4D6]">Recruitment Agency</span> in
             Nairobi, Kenya
           </motion.h1>
 
