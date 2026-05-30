@@ -5,9 +5,9 @@ import FeaturedBlogs from "../components/Blog/Featured/FeaturedBlogs";
 
 export const metadata = {
   title:
-    "Recruitment & Payroll Services in Kenya | Top HR & Outsourcing Firm in Africa",
+    "Top Recruitment Company in Kenya | Gap Recruitment Services",
   description:
-    "Trusted recruitment agency in Kenya offering expert staffing, payroll management, and staff outsourcing services across Africa. Find top talent, streamline HR, and grow your business with our end-to-end workforce solutions.",
+    "Build an elite workforce. Gap Recruitment engineers executive search, permanent placement, and cross-border teams for organizations venturing into or already in Kenya.",
   keywords: [
     "recruitment agency Kenya",
     "payroll services Kenya",
@@ -22,9 +22,9 @@ export const metadata = {
   ],
   openGraph: {
     title:
-      "Recruitment & Payroll Services in Kenya | Top HR & Outsourcing Firm in Africa",
+      "Top Recruitment Company in Kenya | Gap Recruitment Services",
     description:
-      "Leading recruitment agency in Kenya for payroll processing, staffing, and workforce outsourcing solutions. Serving businesses across East and Sub-Saharan Africa.",
+      "Build an elite workforce. Gap Recruitment engineers executive search, permanent placement, and cross-border teams for organizations venturing into or already in Kenya.",
     url: "https://www.gaprecruitment.co.ke",
     siteName: "Gap Recruitment Services",
     images: [
@@ -41,9 +41,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Recruitment & Payroll Services in Kenya | Top HR & Outsourcing Firm in Africa",
+      "Top Recruitment Company in Kenya | Gap Recruitment Services",
     description:
-      "Streamline your HR and payroll with Kenya's top recruitment and outsourcing agency. Serving East Africa and beyond.",
+      "Build an elite workforce. Gap Recruitment engineers executive search, permanent placement, and cross-border teams for organizations venturing into or already in Kenya.",
     images: [
       "https://gaprecruitment.co.ke/assets/find-a-job-with-expert-cv-writing-linkedin-optimization-and-interview-preparation-services-in-kenya.svg",
     ],
