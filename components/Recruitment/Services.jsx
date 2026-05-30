@@ -8,25 +8,25 @@ export default function Services() {
     {
       title: "Permanent Recruitment",
       description:
-        "Connect with full-time professionals who align with your company’s vision.",
+        "Build long-term organizational stability. We source and place full-time professionals who align seamlessly with your corporate culture and business goals across Kenya.",
       icon: <Clock size={24} />,
     },
     {
-      title: "Temporary/Contract",
+      title: "Contract & Temporary Staffing",
       description:
-        "Flexible staffing solutions to meet short-term project demands.",
+        "Maintain agility. Access flexible, fully compliant personnel to handle sudden peak periods without expanding your internal recruitment overheads.",
       icon: <Briefcase size={24} />,
     },
     {
       title: "Executive Search",
       description:
-        "Expert headhunting for top-tier leadership and strategic roles.",
+        "Secure top-tier leadership. Operating at the standard of premier recruitment firms, we specialize in discreetly headhunting C-suite executives and strategic decision-makers.",
       icon: <Star size={24} />,
     },
     {
-      title: "Gig Recruitment",
+      title: "Remote Recruitment Solutions",
       description:
-        "Find remote and freelance talent to drive your projects forward.",
+        "Expand your geographic reach. We build highly skilled technical and operational teams optimized for global, cross-border corporate collaboration.",
       icon: <Users size={24} />,
     },
   ];
@@ -42,7 +42,7 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="gap-title"
         >
-          Staffing Solutions for Every Need
+          Workforce & Recruitment Solutions
         </motion.h2>
 
         {/* Subtitle */}
@@ -53,8 +53,7 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="gap-subtitle"
         >
-          Our comprehensive recruitment services are tailored to meet your
-          <span className="text-[#51D4D6]"> specific staffing</span> needs.
+          Deploy tailored recruitment models built to align with your precise organizational structure and operational timelines.
         </motion.p>
 
         {/* Service Cards */}
@@ -96,7 +95,7 @@ export default function Services() {
           </p>
 
           <a href="/contact-us" className="gap-button gap-button-primary mt-8">
-            Connect with us <ArrowRight size={20} className="ml-2" />
+            Hire Top Talent <ArrowRight size={20} className="ml-2" />
           </a>
         </motion.div>
       </div>

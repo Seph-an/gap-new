@@ -6,27 +6,27 @@ import { ShieldCheck, Target, BarChart2, Heart } from "lucide-react";
 export default function Benefits() {
   const benefits = [
     {
-      title: "Access to Top Talent",
+      title: "Elite Talent & Executive Search Networks",
       description:
-        "We connect you with industry-leading professionals who fit your company's culture and goals.",
+        "As a premier headhunting firm in Kenya, we maintain an active pipeline of pre-vetted, high-caliber professionals. We connect your enterprise with specialized experts who align seamlessly with your corporate culture and organizational goals across East Africa.",
       icon: <ShieldCheck size={24} />,
     },
     {
-      title: "Efficient Hiring Process",
+      title: "Streamlined, High-Velocity Hiring",
       description:
-        "Our streamlined process saves you time and resources, ensuring you get the right candidate quickly.",
+        "Our data-backed screening models eliminate hiring bottlenecks. By functioning as an agile recruitment company in Nairobi, we reduce your time-to-hire significantly, ensuring critical vacancies are filled quickly without sacrificing candidate quality or compliance.",
       icon: <Target size={24} />,
     },
     {
-      title: "Data-Driven Insights",
+      title: "Advanced Market Insights & Analytics",
       description:
-        "Benefit from advanced analytics and market insights to inform your hiring strategy.",
+        "Standout recruitment firms in Kenya don’t just fill roles; they guide growth. We provide deep compensation benchmarking, labor market analytics, and talent mapping to help you build an incredibly competitive local or regional hiring strategy.",
       icon: <BarChart2 size={24} />,
     },
     {
-      title: "Dedicated Support",
+      title: "Scalable Regional Workforce Support",
       description:
-        "Our team is committed to your success, providing continuous support and guidance.",
+        "Our commitment extends far beyond the initial placement. Recognized among growing recruitment companies in Kenya, we offer dedicated, end-to-end consulting to support your talent retention and workforce scaling goals as you expand across Africa.",
       icon: <Heart size={24} />,
     },
   ];
@@ -42,7 +42,7 @@ export default function Benefits() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="gap-title"
         >
-          Why Choose Our Recruitment Services?
+          Why Choose Us as Your Recruitment Agency in Kenya?
         </motion.h2>
 
         {/* Subtitle */}
@@ -53,7 +53,9 @@ export default function Benefits() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="gap-subtitle"
         >
-          Discover the advantages of partnering with us for your hiring needs.
+          Partner with a premier recruitment agency in Nairobi to access elite
+          networks, streamline your hiring velocity, and leverage advanced market
+          intelligence for scalable regional growth across Africa.
         </motion.p>
 
         {/* Benefit Cards */}

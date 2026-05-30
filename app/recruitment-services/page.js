@@ -2,12 +2,13 @@ import HeroSection from "../../components/Recruitment/HeroSection";
 import Benefits from "../../components/Recruitment/Benefits";
 import Process from "../../components/Recruitment/Process";
 import Services from "../../components/Recruitment/Services";
+import InternationalBanner from "../../components/Recruitment/InternationalBanner";
 
 export const metadata = {
   title:
-    "Recruitment Services in Kenya & East Africa | Gap Recruitment Services",
+    "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
   description:
-    "Find top talent faster with our recruitment services in Kenya and East Africa. From executive search to volume hiring, we deliver results.",
+    "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
 icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -21,11 +22,11 @@ icons: {
     "Kenyan recruitment agency",
   ],
   openGraph: {
-    title: "Recruitment Services in Kenya & East Africa",
+    title: "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
     description:
-      "Your trusted recruitment partner in Kenya. We offer customized hiring solutions for businesses across East Africa.",
+      "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
     url: "https://gaprecruitment.co.ke/recruitment-services",
-    siteName: "Gap Recruitment Services",
+    siteName: "Gap Recruitment Services Limited",
     locale: "en_KE",
     type: "website",
   },
@@ -34,9 +35,9 @@ icons: {
     images: [
       "https://gaprecruitment.co.ke/assets/hire-best-talent-with-our-expert-recruitment-services-in-nairobi.svg",
     ],
-    title: "Recruitment Services in Kenya & East Africa | YourCompanyName",
+    title: "Leading Recruitment Agency in Nairobi, Kenya | Gap Recruitment Services Limited",
     description:
-      "Find reliable recruitment solutions for your business in Kenya and East Africa.",
+      "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
   },
   robots: {
     index: true,
@@ -50,11 +51,11 @@ icons: {
 const recruitmentSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Gap Recruitment Services",
+  name: "Gap Recruitment Services Limited",
   url: "https://gaprecruitment.co.ke",
   logo: "https://gaprecruitment.co.ke/logo.png",
   description:
-    "Expert recruitment services in Kenya and East Africa, specializing in executive search, volume hiring, and tailored staffing solutions.",
+    "Looking to find best talent? As a premier recruitment company in Nairobi, we provide compliant, tailored workforce solutions across Kenya & Africa. Request a consult.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Suite A104 Madonna House Annex, Westlands Road",
@@ -141,6 +142,7 @@ export default function RecruitmentPage() {
       <Benefits />
       <Process />
       <Services />
+      <InternationalBanner />
     </main>
   );
 }

@@ -6,21 +6,21 @@ import { Search, UserCheck, Handshake } from "lucide-react";
 export default function Process() {
   const steps = [
     {
-      title: "Candidate Sourcing",
+      title: "Specialized Recruitment Sourcing",
       description:
-        "We leverage top platforms and networks to find the best talent for your needs.",
+        "We don't just post jobs; we actively map the market. Using our deep talent networks across Nairobi and East Africa, we headhunt both active and passive professionals tailored to your precise roles.",
       icon: <Search size={24} />,
     },
     {
-      title: "Screening & Assessment",
+      title: "Rigorous Vetting & Assessment",
       description:
-        "Our experts conduct thorough evaluations to ensure the perfect candidate fit.",
+        "Our recruitment experts conduct multi-layered screenings. We evaluate technical track records and cultural fit to ensure every candidate on your shortlist is ready to deliver.",
       icon: <UserCheck size={24} />,
     },
     {
-      title: "Interview & Placement",
+      title: "Final Placement & Compliance",
       description:
-        "We facilitate seamless interviews and ensure a smooth transition to your team.",
+        "We manage the entire recruitment pipeline, from interview coordination to local labor law compliance and salary benchmarking, ensuring a smooth onboarding transition.",
       icon: <Handshake size={24} />,
     },
   ];
@@ -47,8 +47,8 @@ export default function Process() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           className="gap-subtitle"
         >
-          Experience a streamlined, efficient hiring journey in three{" "}
-          <span className="text-[#51D4D6]">simple steps.</span>
+          A structured, fully compliant recruitment journey delivered in{" "}
+          <span className="text-[#51D4D6]">three simple phases.</span>
         </motion.p>
 
         {/* Process Steps */}

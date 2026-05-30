@@ -16,8 +16,8 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="page-header"
           >
-            Find the <span className="text-[#51D4D6]">Best Talent</span> for
-            Your Business
+            Premier <span className="text-[#51D4D6]">Recruitment Company</span> in
+            Nairobi, Kenya
           </motion.h1>
 
           <motion.p
@@ -26,9 +26,9 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="page-subheader"
           >
-            Our expert{" "}
-            <span className="text-[#51D4D6]">recruitment services</span> help
-            you connect with top professionals efficiently and seamlessly.
+            Discover exceptional talent to scale your organization. Our custom{" "}
+            <span className="text-[#51D4D6]">recruitment services</span> connect
+            you with top-tier professional and technical experts across Kenya.
           </motion.p>
 
           <motion.div
@@ -41,7 +41,7 @@ export default function HeroSection() {
               href="#types-of-recruitment"
               className="inline-flex items-center bg-[#51D4D6] text-[#0a0a0a] font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition"
             >
-              Find the Best Talent <ArrowRight size={20} className="ml-2" />
+              Partner With Us <ArrowRight size={20} className="ml-2" />
             </a>
           </motion.div>
         </div>
