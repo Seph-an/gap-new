@@ -83,9 +83,10 @@ const CoreValuesSection = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="gap-subtitle max-w-3xl text-center"
           >
-            Connect with us to power your business with expert{" "}
+            Connect with Gap Recruitment Services Kenya to power your business
+            with expert{" "}
             <span className="text-[#51D4D6]">
-              talent acquisition, payrol management
+              talent acquisition, payroll management
             </span>{" "}
             and <span className="text-[#51D4D6]">staff outsourcing</span> to
             streamline operations, and unlock growth.

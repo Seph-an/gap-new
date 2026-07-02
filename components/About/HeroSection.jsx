@@ -61,7 +61,7 @@ const HeroSection = () => {
             className="page-header"
           >
             About <span className="text-[#51D4D6]">Gap Recruitment</span>{" "}
-            Services Limited
+            Services Kenya
           </motion.h1>
 
           <motion.p
@@ -70,10 +70,11 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="page-subheader"
           >
-            We specialize in empowering{" "}
-            <span className="text-[#51D4D6]">talent acquisition</span> and{" "}
-            <span className="text-[#51D4D6]">business success</span> to drive
-            growth and innovation.
+            Gap Recruitment Services is a{" "}
+            <span className="text-[#51D4D6]">recruitment agency in Kenya</span>{" "}
+            connecting employers with qualified talent while supporting job
+            seekers through verified vacancies, recruitment services, and
+            practical career opportunities.
           </motion.p>
 
           <motion.div
@@ -100,7 +101,7 @@ const HeroSection = () => {
         >
           <Image
             src="/assets/about-gap-recrutiment-and-payroll-management-services-in-kenya-get-best-talent.svg"
-            alt="about-gap-recrutiment-and-payroll-management-services-in-kenya"
+            alt="Gap Recruitment Services Kenya recruitment agency supporting employers and job seekers"
             width={400}
             height={300}
             sizes="(max-width: 600px) 100%, (max-width: 1200px) 500px, 33vw"

@@ -21,9 +21,9 @@ icons: {
     canonical: "https://gaprecruitment.co.ke/about-us",
   },
   openGraph: {
-    title: "About Us | Recruitment, Payroll & Outsourcing Experts",
+    title: "Gap Recruitment Services Kenya | About Our Recruitment Agency in Kenya",
     description:
-      "Discover our story and meet the team powering your business success through recruitment, payroll, and HR outsourcing.",
+      "Learn how Gap Recruitment Services Kenya supports employers, job seekers, and growing teams through recruitment, payroll management, and staff outsourcing.",
     url: "https://gaprecruitment.co.ke/about-us",
     siteName: "Gap Recruitment Services",
     type: "website",
@@ -32,15 +32,15 @@ icons: {
         url: "https://gaprecruitment.co.ke/assets/outsourcing-staff-for-efficiency-and-speed.svg",
         width: 1200,
         height: 630,
-        alt: "Our HR team at work",
+        alt: "Gap Recruitment Services Kenya recruitment agency support",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | Recruitment, Payroll & Outsourcing Experts",
+    title: "Gap Recruitment Services Kenya | About Our Recruitment Agency in Kenya",
     description:
-      "We're dedicated to helping companies thrive through expert HR solutions. Learn more about our journey.",
+      "Learn how Gap Recruitment Services Kenya supports employers, job seekers, and growing teams through recruitment services in Kenya.",
     images: [
       "https://gaprecruitment.co.ke/assets/outsourcing-staff-for-efficiency-and-speed.svg",
     ],
@@ -57,11 +57,11 @@ export function generateAboutPageSchema() {
     "@type": "AboutPage",
     name: "About Us",
     description:
-      "Our mission is to empower businesses with expert recruitment, payroll, and outsourcing services. Learn more about our team and story.",
+      "Gap Recruitment Services Kenya connects employers with qualified talent and supports job seekers with verified vacancies, recruitment services, and career opportunities.",
     url: "https://gaprecruitment.co.ke/about-us",
     mainEntity: {
       "@type": "Organization",
-      name: "YourCompanyName",
+      name: "Gap Recruitment Services Kenya",
       url: "https://gaprecruitment.co.ke",
       logo: "https://gaprecruitment.co.ke/logo.png",
       foundingDate: "2020-04-01",
