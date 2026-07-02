@@ -20,13 +20,13 @@ export const metadata = {
     "interview preparation services",
   ],
   alternates: {
-    canonical: "https://gaprecruitment.co.ke/jobseekers",
+    canonical: "https://gaprecruitment.co.ke/job-seeker",
   },
   openGraph: {
     title: "CV Writing, LinkedIn & Interview Coaching for Job Seekers | Kenya",
     description:
       "Stand out in the job market with our career services tailored to job seekers in Kenya and East Africa.",
-    url: "https://gaprecruitment.co.ke/jobseekers",
+    url: "https://gaprecruitment.co.ke/job-seeker",
     siteName: "Gap Recruitment Services",
     locale: "en_KE",
     type: "website",
@@ -51,7 +51,7 @@ export function generateJobSeekerSchema() {
     "@context": "https://schema.org",
     "@type": "EmploymentAgency",
     name: "Gap Recruitment Services",
-    url: "https://gaprecruitment.co.ke/jobseekers",
+    url: "https://gaprecruitment.co.ke/job-seeker",
     logo: "https://gaprecruitment.co.ke/logo.png",
     description:
       "Gap Recruitment Services empowers job seekers in Kenya and East Africa through professional CV writing, LinkedIn profile optimization, and expert interview preparation services.",

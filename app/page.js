@@ -20,16 +20,19 @@ export const metadata = {
     "HR services East Africa",
     "contract staffing Kenya",
   ],
+  alternates: {
+    canonical: "https://gaprecruitment.co.ke",
+  },
   openGraph: {
     title:
       "Top Recruitment Company in Kenya | Gap Recruitment Services",
     description:
       "Build an elite workforce. Gap Recruitment engineers executive search, permanent placement, and cross-border teams for organizations venturing into or already in Kenya.",
-    url: "https://www.gaprecruitment.co.ke",
+    url: "https://gaprecruitment.co.ke",
     siteName: "Gap Recruitment Services",
     images: [
       {
-        url: "https://www.gaprecruitment.co.ke/assets/find-a-job-with-expert-cv-writing-linkedin-optimization-and-interview-preparation-services-in-kenya.svg",
+        url: "https://gaprecruitment.co.ke/assets/find-a-job-with-expert-cv-writing-linkedin-optimization-and-interview-preparation-services-in-kenya.svg",
         width: 1200,
         height: 630,
         alt: "HR & Payroll Outsourcing in Kenya",
@@ -58,8 +61,8 @@ export function generateHomeSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Gap Recruitment Services",
-    url: "https://www.gaprecruitment.co.ke",
-    logo: "https://www.gaprecruitment.co.ke/logo.png",
+    url: "https://gaprecruitment.co.ke",
+    logo: "https://gaprecruitment.co.ke/logo.png",
     description:
       "Leading recruitment and HR outsourcing agency in Kenya providing payroll management, contract staffing, and workforce solutions across Africa.",
     address: {
@@ -105,4 +108,3 @@ export default function Home() {
     </>
   );
 }
-

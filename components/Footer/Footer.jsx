@@ -67,7 +67,7 @@ export default function Footer() {
               <a className={footerLink} href="/frequently-asked-questions">
                 FAQs
               </a>
-              <a className={footerLink} href="/jobseekers">
+              <a className={footerLink} href="/job-seeker">
                 Jobseekers
               </a>
               <a className={footerLink} href="/blog">

@@ -3,9 +3,9 @@ import MissionVisionSection from "../../components/About/MissionVisionSection";
 import CoreValuesSection from "../../components/About/CoreValuesSection";
 
 export const metadata = {
-  title: "About Us | Recruitment, Payroll & Outsourcing Experts",
+  title: "Gap Recruitment Services Kenya | About Our Recruitment Agency in Kenya",
   description:
-    "Learn more about our mission, values, and team. We specialize in recruitment, payroll, and outsourcing solutions tailored for businesses in Africa and beyond.",
+    "Gap Recruitment Services Kenya connects employers with qualified talent and supports job seekers with verified vacancies, recruitment services, and career opportunities.",
 icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
