@@ -16,7 +16,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="page-header"
           >
-            Elevate Your Career Today!
+            Job Seeker Support from Gap Recruitment Services Limited Kenya
           </motion.h1>
 
           <motion.p
@@ -25,12 +25,13 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
             className="page-subheader"
           >
-            Professional{" "}
+            Access practical career support from Gap Recruitment Services
+            Kenya, including{" "}
             <span className="text-[#51D4D6]">
-              CV Writing, LinkedIn Optimization,
-            </span>{" "}
-            & <span className="text-[#51D4D6]">Interview Coaching + </span>
-            to help you land your dream job faster.
+              professional CV writing, LinkedIn optimization
+            </span>
+            , <span className="text-[#51D4D6]">interview coaching</span>, and
+            verified job opportunities in Kenya.
           </motion.p>
 
           <motion.div

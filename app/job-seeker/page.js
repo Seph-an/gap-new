@@ -4,9 +4,9 @@ import TestimonialsSection from "../../components/Jobseekers/TestimonialsSection
 
 export const metadata = {
   title:
-    "CV Writing, LinkedIn Optimization & Interview Prep Services | Kenya & East Africa",
+    "Job Seeker Support from Gap Recruitment Services Limited Kenya",
   description:
-    "Empower your career with expert CV writing, LinkedIn profile optimization, and interview preparation services. Tailored for job seekers across Kenya and East Africa.",
+    "Access practical career support from Gap Recruitment Services Kenya, including professional CV writing, LinkedIn optimization, interview coaching, and verified job opportunities in Kenya.",
   keywords: [
     "CV writing services Kenya",
     "LinkedIn optimization Kenya",
