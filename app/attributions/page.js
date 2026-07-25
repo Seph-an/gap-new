@@ -1,8 +1,16 @@
-// <a href="https://storyset.com/work">Work illustrations by Storyset</a>
-//man standing cv writing illustration
+export const dynamic = "force-dynamic";
 
-//<a href="https://storyset.com/work">Work illustrations by Storyset</a>
-//cover letter writing, girl with email
+import { LegalPage } from '@/components/CMS/PageRenderers';
+import { fetchCollectionBySlug, seoToMetadata } from '@/lib/cms/strapi';
 
-//<a href="https://storyset.com/work">Work illustrations by Storyset</a>
-//writing girl
+const slug = 'attributions';
+
+export async function generateMetadata() {
+  const page = await fetchCollectionBySlug('legal-pages', slug);
+  return seoToMetadata(page.seo);
+}
+
+export default async function Page() {
+  const page = await fetchCollectionBySlug('legal-pages', slug);
+  return <LegalPage page={page} />;
+}

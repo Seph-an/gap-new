@@ -12,20 +12,20 @@ import Chat from "@/components/Common/Chat/Chat";
 import ChatOptions from "@/components/Common/Chat/ChatOptions";
 import Top from "@/components/Common/Top";
 import CookieAlert from "@/components/Common/CookieAlert";
+import { fetchGlobal } from "@/lib/cms/strapi";
+
+export const dynamic = "force-dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
 // Tell Next your real site URL at build time:
 export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL);
 
-export const metadata = {
-  title: "Gap Recruitment",
-  description: "Recruitment services and career support in Kenya",
-};
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const global = await fetchGlobal();
   return (
-    <html lang="en">
+    <html>
       <body className={`${inter.className} antialiased`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-175555QC9C"
@@ -41,13 +41,13 @@ export default function RootLayout({ children }) {
         </Script>
         <Providers>
           <main>
-            <Navbar />
+            <Navbar global={global} />
             {children}
-            <Footer />
-            <Chat />
-            <ChatOptions />
+            <Footer global={global} />
+            <Chat global={global} />
+            <ChatOptions global={global} />
             <Top />
-	    <CookieAlert />
+	    <CookieAlert global={global} />
           </main>
         </Providers>
       </body>
