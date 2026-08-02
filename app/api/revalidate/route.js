@@ -2,6 +2,9 @@
 import { revalidateTag, revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { timingSafeEqual } from "crypto";
+import { JOBS_CACHE_TAG, JOBS_ROUTE } from "@/lib/jobs";
+
+export const dynamic = "force-dynamic";
 
 export async function POST(request) {
   const secret = request.headers.get("x-strapi-signature");
@@ -33,6 +36,15 @@ export async function POST(request) {
     const body = await request.json();
 
     const { model, entry } = body;
+
+    if (model === "job-position" && entry?.erp_job_id) {
+      revalidateTag(JOBS_CACHE_TAG);
+      revalidateTag(`job:${entry.erp_job_id}`);
+      revalidatePath(JOBS_ROUTE);
+
+      console.log(`Revalidated job position: ${entry.erp_job_id}`);
+      return NextResponse.json({ revalidated: true, now: Date.now() });
+    }
 
     if (model === "blog" && entry) {
       // Revalidate the specific blog post

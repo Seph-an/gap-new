@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { imageUrl } from "@/lib/cms/strapi";
+import Link from "next/link";
+import { normalizeListedJobsLink } from "@/lib/jobs";
 
 export default function Footer({ global }) {
   const year = new Date().getFullYear();
@@ -27,7 +29,7 @@ export default function Footer({ global }) {
           <div className="mx-auto sm:mx-0">
             <h3 className={footerTitle}>{footer.sections?.company}</h3>
             <div className="grid grid-cols-3 sm:grid-cols-2 gap-2 text-gray-300">
-              {footer.companyLinks?.map((item) => <a key={`${item.label}-${item.url}`} className={footerLink} href={item.url}>{item.label}</a>)}
+              {footer.companyLinks?.map((item) => <Link key={item.label} className={footerLink} href={normalizeListedJobsLink(item.url)}>{item.label}</Link>)}
             </div>
           </div>
 

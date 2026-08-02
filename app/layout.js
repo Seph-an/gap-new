@@ -18,8 +18,10 @@ export const dynamic = "force-dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Tell Next your real site URL at build time:
-export const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL);
+export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://gaprecruitment.co.ke'),
+  applicationName: 'Gap Recruitment Services Limited',
+};
 
 
 export default async function RootLayout({ children }) {

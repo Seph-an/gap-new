@@ -2,14 +2,22 @@ import { CheckCircle } from 'lucide-react';
 import CMSHero from '@/components/CMS/Hero';
 import LinkButton from '@/components/CMS/LinkButton';
 import ClientLogoMarquee from './ClientLogoMarquee';
+import BlogPost from '@/components/Blog/Home/BlogPost';
 
-export default function HomePageContent({ page }) {
+export default function HomePageContent({ page, featuredBlogs = [] }) {
+  const heroTitle = page.hero?.title?.split(/(Recruitment|Kenya)/gi).map((part, index) =>
+    /^(Recruitment|Kenya)/i.test(part)
+      ? <span key={part + "-" + index} className="text-[#51D4D6]">{part}</span>
+      : part
+  );
+  const hero = { ...page.hero, title: heroTitle };
+
   return (
     <>
-      <CMSHero hero={page.hero} />
+      <CMSHero hero={hero} />
       <WhySection section={page.why} clientLogos={page.clientLogos} />
       <ServicesSection section={page.services} />
-      <FeaturedBlogShell section={page.featuredBlogSection} />
+      <FeaturedBlogShell section={page.featuredBlogSection} blogs={featuredBlogs} />
     </>
   );
 }
@@ -102,13 +110,14 @@ function WhySection({ section, clientLogos }) {
   );
 }
 
-function FeaturedBlogShell({ section }) {
+function FeaturedBlogShell({ section, blogs }) {
   if (!section) return null;
   return (
     <section id="blog" className="flex w-screen flex-col items-center bg-gray-900">
       <div className="container flex flex-col items-center py-16">
         <h2 className="gap-title">{section.title}</h2>
         {section.subtitle && <p className="gap-subtitle mt-8 max-w-5xl">{section.subtitle}</p>}
+        {blogs.length > 0 && <div className="mt-12 grid w-full gap-7 md:grid-cols-2 lg:grid-cols-3">{blogs.map((post) => <BlogPost key={post.slug} post={post} />)}</div>}
         {section.footerText && <p className="gap-subtitle mt-5 max-w-5xl">{section.footerText}</p>}
         <div className="mt-5"><LinkButton link={section.cta} /></div>
       </div>
