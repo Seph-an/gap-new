@@ -34,11 +34,14 @@ export default function Navbar({ global }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [jobSeekersOpen, setJobSeekersOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navLinks = (global?.navLinks || []).filter((item) => item.enabled !== false);
   const serviceLinks = global?.serviceLinks || [];
+  const jobSeekerLinks = global?.jobSeekerLinks || [];
   const logo = global?.assets?.logo;
   const servicesActive = serviceLinks.some((service) => isActiveRoute(pathname, service.link?.url));
+  const jobSeekersActive = isActiveRoute(pathname, "/job-seeker") || jobSeekerLinks.some((link) => isActiveRoute(pathname, link.link?.url));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -61,6 +64,18 @@ export default function Navbar({ global }) {
                 </button>
                 <AnimatePresence>{servicesOpen && <ServiceDropdown services={serviceLinks} pathname={pathname} />}</AnimatePresence>
               </div>
+            ) : item.href === "/job-seeker" ? (
+              <div key={item.name} className="relative" onMouseEnter={() => setJobSeekersOpen(true)} onMouseLeave={() => setJobSeekersOpen(false)}>
+                <div className="flex items-center">
+                  <Link href={item.href} aria-current={jobSeekersActive ? "page" : undefined} className={"relative inline-flex font-medium transition-colors duration-200 hover:text-[#51D4D6] " + (jobSeekersActive ? "text-[#51D4D6]" : "text-white/90")}>
+                    {item.name}{item.showBadge && item.badgeText && <NavBadge item={item} />}
+                  </Link>
+                  <button type="button" onClick={() => setJobSeekersOpen(!jobSeekersOpen)} aria-label={`Toggle ${item.name} menu`} aria-expanded={jobSeekersOpen} className="ml-1 p-1 text-white/90 transition-colors hover:text-[#51D4D6]">
+                    <ChevronDown size={16} />
+                  </button>
+                </div>
+                <AnimatePresence>{jobSeekersOpen && <ServiceDropdown services={jobSeekerLinks} pathname={pathname} />}</AnimatePresence>
+              </div>
             ) : <NavLink key={item.name} item={item} pathname={pathname} />)}
           </div>
           <motion.button className="lg:hidden z-50" onClick={() => setIsOpen(!isOpen)} whileTap={{ scale: 0.9 }}>
@@ -68,7 +83,7 @@ export default function Navbar({ global }) {
           </motion.button>
         </div>
       </div>
-      <AnimatePresence>{isOpen && <MobileNav navLinks={navLinks} serviceLinks={serviceLinks} setIsOpen={setIsOpen} pathname={pathname} />}</AnimatePresence>
+      <AnimatePresence>{isOpen && <MobileNav navLinks={navLinks} serviceLinks={serviceLinks} jobSeekerLinks={jobSeekerLinks} setIsOpen={setIsOpen} pathname={pathname} />}</AnimatePresence>
     </nav>
   );
 }
@@ -99,13 +114,18 @@ function ServiceDropdown({ services, pathname }) {
   })}</div></motion.div>;
 }
 
-function MobileNav({ navLinks, serviceLinks, setIsOpen, pathname }) {
+function MobileNav({ navLinks, serviceLinks, jobSeekerLinks, setIsOpen, pathname }) {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [jobSeekersOpen, setJobSeekersOpen] = useState(false);
   const servicesActive = serviceLinks.some((service) => isActiveRoute(pathname, service.link?.url));
+  const jobSeekersActive = isActiveRoute(pathname, "/job-seeker") || jobSeekerLinks.some((link) => isActiveRoute(pathname, link.link?.url));
 
   return <motion.div className="lg:hidden fixed inset-0 bg-[#0a0a0a] z-40 pt-20 pb-6 px-4 overflow-y-auto" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><div className="flex flex-col space-y-4">{navLinks.map((item) => item.href === "/services" ? <div key={item.name}><button onClick={() => setServicesOpen(!servicesOpen)} aria-current={servicesActive ? "page" : undefined} className={"flex items-center justify-between w-full py-3 text-lg font-medium hover:text-[#51D4D6] " + (servicesActive ? "text-[#51D4D6]" : "text-white/90")}><span>{item.name}</span><ChevronDown size={20} /></button>{servicesOpen && <div className="pl-4 py-2 space-y-2 bg-gray-50 rounded-md mt-2">{serviceLinks.map((service) => {
     const active = isActiveRoute(pathname, service.link?.url);
     return <Link key={service.title} href={service.link?.url || "#"} aria-current={active ? "page" : undefined} className={"block py-2 hover:text-[#51D4D6] " + (active ? "text-[#51D4D6]" : "text-gray-700")} onClick={() => setIsOpen(false)}>{service.title}</Link>;
+  })}</div>}</div> : item.href === "/job-seeker" ? <div key={item.name}><div className="flex items-center justify-between"><Link href={item.href} aria-current={jobSeekersActive ? "page" : undefined} className={"relative py-3 text-lg font-medium hover:text-[#51D4D6] " + (jobSeekersActive ? "text-[#51D4D6]" : "text-white/90")} onClick={() => setIsOpen(false)}>{item.name}{item.showBadge && item.badgeText && <NavBadge item={item} />}</Link><button type="button" onClick={() => setJobSeekersOpen(!jobSeekersOpen)} aria-label={`Toggle ${item.name} menu`} aria-expanded={jobSeekersOpen} className="p-3 text-white/90 hover:text-[#51D4D6]"><ChevronDown size={20} /></button></div>{jobSeekersOpen && <div className="pl-4 py-2 space-y-2 bg-gray-50 rounded-md mt-2">{jobSeekerLinks.map((link) => {
+    const active = isActiveRoute(pathname, link.link?.url);
+    return <Link key={link.title} href={link.link?.url || "#"} aria-current={active ? "page" : undefined} className={"block py-2 hover:text-[#51D4D6] " + (active ? "text-[#51D4D6]" : "text-gray-700")} onClick={() => setIsOpen(false)}>{link.title}</Link>;
   })}</div>}</div> : <MobileNavLink key={item.name} item={item} pathname={pathname} setIsOpen={setIsOpen} />)}</div></motion.div>;
 }
 
