@@ -45,8 +45,8 @@ export default async function RootLayout({ children }) {
           <main>
             <Navbar global={global} />
             {children}
+            <Footer global={global} />
           </main>
-          <Footer global={global} />
           <Chat global={global} />
           <ChatOptions global={global} />
           <Top />
