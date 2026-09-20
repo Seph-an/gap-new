@@ -1,0 +1,247 @@
+- main [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Gap Recruitment Services Limited" [ref=e7]
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - button "Services" [ref=e11]
+        - link "Case Studies" [ref=e14] [cursor=pointer]:
+          - /url: /recruitment-payroll-and-staff-outsourcing-case-studies-by-gap-recruitment-services
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /about-us
+        - link "Blog" [ref=e16] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=e18]:
+          - link "For Job Seekers" [ref=e19] [cursor=pointer]:
+            - /url: /job-seeker
+            - text: For Job Seekers
+            - generic [ref=e20]: NEW!
+          - button "Toggle For Job Seekers menu" [ref=e21]
+        - link "Contact" [ref=e24] [cursor=pointer]:
+          - /url: /contact-us
+        - link "Listed Jobs" [ref=e25] [cursor=pointer]:
+          - /url: /jobs-at-gap-recruitment-services-kenya
+  - generic [ref=e28]:
+    - navigation "Breadcrumb" [ref=e29]:
+      - list [ref=e30]:
+        - listitem [ref=e31]:
+          - link "Home" [ref=e32] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e33]:
+          - generic [ref=e34]: /
+          - link "Job Seeker Services" [ref=e35] [cursor=pointer]:
+            - /url: /job-seeker
+        - listitem [ref=e36]:
+          - generic [ref=e37]: /
+          - generic [ref=e38]: Interview Preparation
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Interview coaching for job seekers
+        - heading "Walk Into Your Next Interview Prepared" [level=1] [ref=e42]
+        - paragraph [ref=e43]: Practise how you will present your experience, respond to difficult questions and communicate your value with focused guidance from recruitment professionals.
+        - generic [ref=e44]:
+          - link "Book an Interview Preparation Session" [ref=e45] [cursor=pointer]:
+            - /url: /contact-us?service=interview-preparation
+          - link "See How It Works" [ref=e49] [cursor=pointer]:
+            - /url: "#interview-process"
+      - complementary "Interview coaching for job seekers" [ref=e51]:
+        - list [ref=e53]:
+          - listitem [ref=e54]:
+            - generic [ref=e58]: Personalised preparation for your role and career level
+          - listitem [ref=e59]:
+            - generic [ref=e63]: Realistic question practice and mock-interview guidance
+          - listitem [ref=e64]:
+            - generic [ref=e68]: Clear, practical feedback you can apply immediately
+          - listitem [ref=e69]:
+            - generic [ref=e73]: Support for virtual and in-person interviews
+  - region [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - paragraph [ref=e77]: Preparation that feels practical
+        - heading "Turn Interview Anxiety Into a Clear Plan" [level=2] [ref=e78]
+        - paragraph [ref=e79]: Good preparation is not about memorising perfect answers. It is about understanding what employers need, selecting relevant evidence and communicating it naturally.
+      - generic [ref=e80]:
+        - article [ref=e81]:
+          - heading "Build Genuine Confidence" [level=3] [ref=e86]
+          - paragraph [ref=e87]: Rehearse in a supportive setting so the interview format, common questions and your strongest examples feel familiar before the real conversation.
+        - article [ref=e88]:
+          - heading "Strengthen Your Answers" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Learn how to organise answers clearly, use relevant evidence and avoid responses that are vague, overly long or disconnected from the role.
+        - article [ref=e95]:
+          - heading "Present Your Experience Well" [level=3] [ref=e99]
+          - paragraph [ref=e100]: Identify the achievements, skills and career stories that best demonstrate the value you can bring to a prospective employer.
+        - article [ref=e101]:
+          - heading "Handle Difficult Moments" [level=3] [ref=e107]
+          - paragraph [ref=e108]: Prepare for career gaps, salary discussions, role changes, limited experience and other questions that can be difficult to answer without a plan.
+  - region [ref=e109]:
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - paragraph [ref=e112]: A focused coaching journey
+        - heading "How Interview Preparation Works" [level=2] [ref=e113]
+        - paragraph [ref=e114]: Your session is shaped around the opportunity you are pursuing and the areas where focused practice will make the greatest difference.
+      - generic [ref=e115]:
+        - article [ref=e116]:
+          - generic [ref=e117]: "1"
+          - heading "Share the Opportunity" [level=3] [ref=e118]
+          - paragraph [ref=e119]: Send us the job description, your CV and any interview details you have received so the preparation can reflect the actual role.
+        - article [ref=e120]:
+          - generic [ref=e121]: "2"
+          - heading "Plan Your Key Messages" [level=3] [ref=e122]
+          - paragraph [ref=e123]: We identify the experience, achievements and examples that should anchor your responses and professional introduction.
+        - article [ref=e124]:
+          - generic [ref=e125]: "3"
+          - heading "Practise Interview Questions" [level=3] [ref=e126]
+          - paragraph [ref=e127]: Work through realistic questions, follow-up prompts and structured answer techniques in a guided practice conversation.
+        - article [ref=e128]:
+          - generic [ref=e129]: "4"
+          - heading "Receive Practical Feedback" [level=3] [ref=e130]
+          - paragraph [ref=e131]: Leave with clear feedback, priority improvements and a preparation plan you can continue using before interview day.
+  - region [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - paragraph [ref=e135]: What we can cover
+        - heading "Preparation Built Around Your Interview" [level=2] [ref=e136]
+        - paragraph [ref=e137]: Instead of forcing every candidate through the same script, we focus the session on your goals, experience and upcoming interview format.
+      - generic [ref=e138]:
+        - article [ref=e139]:
+          - heading "Role-Specific Question Practice" [level=3] [ref=e144]
+          - paragraph [ref=e145]: Prepare for competency, behavioural, motivational and role-related questions based on the position you are targeting.
+        - article [ref=e146]:
+          - heading "Professional Introduction" [level=3] [ref=e152]
+          - paragraph [ref=e153]: Develop a concise and credible response to opening questions such as “Tell us about yourself” without sounding rehearsed.
+        - article [ref=e154]:
+          - heading "Virtual Interview Readiness" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Review camera presence, environment, communication pace and practical steps for a more confident online interview.
+        - article [ref=e161]:
+          - heading "Follow-Up and Next Steps" [level=3] [ref=e165]
+          - paragraph [ref=e166]: Prepare thoughtful questions for the interviewer and understand how to follow up professionally after the conversation.
+      - generic [ref=e167]:
+        - paragraph [ref=e168]: Have an interview date already? Share the role details when you contact us so we can understand your preparation needs.
+        - link "Discuss My Interview" [ref=e169] [cursor=pointer]:
+          - /url: /contact-us?service=interview-preparation
+  - region [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - paragraph [ref=e176]: Before you book
+        - heading "Interview Preparation FAQs" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Answers to common questions about preparing for an interview with our team.
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - heading [level=3] [ref=e182]:
+            - button "Is the session tailored to my specific job interview?" [expanded] [ref=e183]
+          - region "Is the session tailored to my specific job interview?" [ref=e187]:
+            - paragraph [ref=e191]: Yes. When you have a job description or interview invitation, share it with us together with your CV. We use that context to focus the preparation on the role, likely requirements and your relevant experience.
+        - generic [ref=e192]:
+          - heading [level=3] [ref=e193]:
+            - button "What should I send before the session?" [ref=e194]
+          - region "What should I send before the session?":
+            - paragraph [ref=e200]: Please send your current CV, the job description and any information the employer has provided about the interview format. You can also tell us which questions or parts of the interview concern you most.
+        - generic [ref=e201]:
+          - heading [level=3] [ref=e202]:
+            - button "Can you help me prepare if I do not have a specific interview yet?" [ref=e203]
+          - region "Can you help me prepare if I do not have a specific interview yet?":
+            - paragraph [ref=e209]: Yes. We can focus on the types of roles you are targeting, common interview formats and the career stories you should be ready to discuss. Role-specific information simply allows us to make the practice more precise.
+        - generic [ref=e210]:
+          - heading [level=3] [ref=e211]:
+            - button "Does interview preparation include a mock interview?" [ref=e212]
+          - region "Does interview preparation include a mock interview?":
+            - paragraph [ref=e218]: The session can include realistic question practice and mock-interview elements. The exact balance between coaching, practice and feedback depends on your needs and the interview you are preparing for.
+        - generic [ref=e219]:
+          - heading [level=3] [ref=e220]:
+            - button "Can you prepare me for a virtual interview?" [ref=e221]
+          - region "Can you prepare me for a virtual interview?":
+            - paragraph [ref=e227]: Yes. Preparation can cover both your answers and the practical details that affect virtual interviews, including camera positioning, audio, environment, eye contact and communication pace.
+        - generic [ref=e228]:
+          - heading [level=3] [ref=e229]:
+            - button "How far in advance should I book?" [ref=e230]
+          - region "How far in advance should I book?":
+            - paragraph [ref=e236]: Book as early as you can so there is time to practise after receiving feedback. If your interview is approaching quickly, include the date in your enquiry so our team can advise you on availability.
+  - region [ref=e237]:
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - paragraph [ref=e243]: Prepare with purpose
+        - heading "Ready to Feel More Confident About Your Interview?" [level=2] [ref=e244]
+        - paragraph [ref=e245]: Tell us about the role and interview you are preparing for. We will help you choose the most useful focus for your session.
+        - generic [ref=e246]:
+          - link "Book My Preparation Session" [ref=e247] [cursor=pointer]:
+            - /url: /contact-us?service=interview-preparation
+          - link "Review Common Questions" [ref=e251] [cursor=pointer]:
+            - /url: "#interview-faqs"
+      - list [ref=e255]:
+        - listitem [ref=e256]:
+          - generic [ref=e262]:
+            - generic [ref=e263]: Personalised guidance
+            - generic [ref=e264]: Preparation shaped around your experience and target role.
+        - listitem [ref=e265]:
+          - generic [ref=e270]:
+            - generic [ref=e271]: Practical rehearsal
+            - generic [ref=e272]: Use realistic questions to practise communicating your value.
+        - listitem [ref=e273]:
+          - generic [ref=e277]:
+            - generic [ref=e278]: Actionable feedback
+            - generic [ref=e279]: Leave knowing what to improve and how to keep practising.
+  - generic [ref=e281]:
+    - generic [ref=e282]:
+      - generic [ref=e284]:
+        - img "Gap Recruitment Services Limited" [ref=e285]
+        - generic [ref=e286]:
+          - heading "Gap Recruitment Services Limited" [level=2] [ref=e287]
+          - heading "Your Talent Solutions Partner!" [level=4] [ref=e288]
+      - generic [ref=e289]:
+        - heading "Company" [level=3] [ref=e290]
+        - generic [ref=e291]:
+          - link "Home" [ref=e292] [cursor=pointer]:
+            - /url: /
+          - link "Payroll" [ref=e293] [cursor=pointer]:
+            - /url: /payroll-management
+          - link "About" [ref=e294] [cursor=pointer]:
+            - /url: /about-us
+          - link "Recruitment" [ref=e295] [cursor=pointer]:
+            - /url: /recruitment-services
+          - link "Contact" [ref=e296] [cursor=pointer]:
+            - /url: /contact-us
+          - link "Outsourcing" [ref=e297] [cursor=pointer]:
+            - /url: /staff-outsourcing
+          - link "FAQs" [ref=e298] [cursor=pointer]:
+            - /url: /frequently-asked-questions
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - heading "Socials" [level=3] [ref=e301]
+          - generic [ref=e302]:
+            - link [ref=e303] [cursor=pointer]:
+              - /url: https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09
+              - img "Twitter" [ref=e305]
+            - link [ref=e306] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/18jZ4dS8k2/
+              - img "Facebook" [ref=e308]
+            - link [ref=e309] [cursor=pointer]:
+              - /url: https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4
+              - img "Instagram" [ref=e311]
+            - link [ref=e312] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/gaprecruitmentserviceslimited/
+              - img "LinkedIn" [ref=e314]
+        - heading "Credentials" [level=3] [ref=e316]
+    - generic [ref=e318]:
+      - paragraph [ref=e319]: © 2026 Gap Recruitment Services Limited. All rights reserved.
+      - generic [ref=e320]:
+        - link "Privacy Policy" [ref=e321] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=e322] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Cookie Policy" [ref=e323] [cursor=pointer]:
+          - /url: /cookie-policy
+      - paragraph [ref=e324]:
+        - text: Developed by
+        - link "Sephanly" [ref=e325] [cursor=pointer]:
+          - /url: https://dev.sephan.co.ke
+  - generic [ref=e326] [cursor=pointer]: Hey, Inquire here!
+  - generic [ref=e333]:
+    - paragraph [ref=e334]: We use cookies to improve your experience and analyze site traffic.
+    - generic [ref=e335]:
+      - button "Accept" [ref=e336]
+      - button "Reject" [ref=e337]
+    - link "Cookie Policy" [ref=e338] [cursor=pointer]:
+      - /url: /cookie-policy

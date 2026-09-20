@@ -1,0 +1,143 @@
+- main [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Gap Recruitment Services Limited" [ref=e7]
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - button "Services" [ref=e11]
+        - link "Case Studies" [ref=e14] [cursor=pointer]:
+          - /url: /recruitment-payroll-and-staff-outsourcing-case-studies-by-gap-recruitment-services
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /about-us
+        - link "Blog" [ref=e16] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=e18]:
+          - link "For Job Seekers" [ref=e19] [cursor=pointer]:
+            - /url: /job-seeker
+            - text: For Job Seekers
+            - generic [ref=e20]: NEW!
+          - button "Toggle For Job Seekers menu" [ref=e21]
+        - link "Contact" [ref=e24] [cursor=pointer]:
+          - /url: /contact-us
+        - link "Listed Jobs" [ref=e25] [cursor=pointer]:
+          - /url: /jobs-at-gap-recruitment-services-kenya
+  - generic [ref=e27]:
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Choose how you would like to meet
+      - heading "Interview Preparation Pricing" [level=1] [ref=e30]
+      - paragraph [ref=e31]: Select an online or physical coaching session. Both options include role-specific preparation, guided practice and actionable feedback.
+    - generic [ref=e33]:
+      - group "Session format" [ref=e34]:
+        - generic [ref=e36]:
+          - generic [ref=e37] [cursor=pointer]:
+            - radio "Online Interview Preparation KES 2,500 Meeting details are shared after confirmation." [checked] [ref=e38]
+            - generic [ref=e39]: Online Interview Preparation
+            - generic [ref=e43]: KES 2,500
+            - generic [ref=e44]: Meeting details are shared after confirmation.
+          - generic [ref=e45] [cursor=pointer]:
+            - radio "Physical Interview Preparation KES 3,500 Held at our Nairobi office; location details are shared after confirmation." [ref=e46]
+            - generic [ref=e47]: Physical Interview Preparation
+            - generic [ref=e51]: KES 3,500
+            - generic [ref=e52]: Held at our Nairobi office; location details are shared after confirmation.
+      - group "Preferred date & Available time" [ref=e53]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]: Preferred date
+            - combobox "Preferred date" [ref=e60]:
+              - option [selected]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Available time
+            - combobox "Available time" [disabled] [ref=e66]:
+              - option [selected]
+      - group "Tell us about the role and interview" [ref=e67]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - text: Full name
+            - textbox "Full name" [ref=e71]
+          - generic [ref=e72]:
+            - text: Email address
+            - textbox "Email address" [ref=e73]
+          - generic [ref=e74]:
+            - text: Phone number
+            - textbox "Phone number" [ref=e75]
+          - generic [ref=e76]:
+            - text: Role you are interviewing for
+            - textbox "Role you are interviewing for" [ref=e77]
+          - generic [ref=e78]:
+            - text: Company or organisation (optional)
+            - textbox "Company or organisation (optional)" [ref=e79]
+          - generic [ref=e80]:
+            - text: Upload your CV (PDF or Word, maximum 5 MB)
+            - button "Upload your CV (PDF or Word, maximum 5 MB)" [ref=e82]
+          - generic [ref=e83]:
+            - text: Tell us about the role and interview
+            - textbox "Tell us about the role and interview" [ref=e84]
+          - generic [ref=e85]:
+            - text: Anything else we should know? (optional)
+            - textbox "Anything else we should know? (optional)" [ref=e86]
+      - button "Confirm My Session" [ref=e87]
+  - generic [ref=e89]:
+    - generic [ref=e90]:
+      - generic [ref=e92]:
+        - img "Gap Recruitment Services Limited" [ref=e93]
+        - generic [ref=e94]:
+          - heading "Gap Recruitment Services Limited" [level=2] [ref=e95]
+          - heading "Your Talent Solutions Partner!" [level=4] [ref=e96]
+      - generic [ref=e97]:
+        - heading "Company" [level=3] [ref=e98]
+        - generic [ref=e99]:
+          - link "Home" [ref=e100] [cursor=pointer]:
+            - /url: /
+          - link "Payroll" [ref=e101] [cursor=pointer]:
+            - /url: /payroll-management
+          - link "About" [ref=e102] [cursor=pointer]:
+            - /url: /about-us
+          - link "Recruitment" [ref=e103] [cursor=pointer]:
+            - /url: /recruitment-services
+          - link "Contact" [ref=e104] [cursor=pointer]:
+            - /url: /contact-us
+          - link "Outsourcing" [ref=e105] [cursor=pointer]:
+            - /url: /staff-outsourcing
+          - link "FAQs" [ref=e106] [cursor=pointer]:
+            - /url: /frequently-asked-questions
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - heading "Socials" [level=3] [ref=e109]
+          - generic [ref=e110]:
+            - link [ref=e111] [cursor=pointer]:
+              - /url: https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09
+              - img "Twitter" [ref=e113]
+            - link [ref=e114] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/18jZ4dS8k2/
+              - img "Facebook" [ref=e116]
+            - link [ref=e117] [cursor=pointer]:
+              - /url: https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4
+              - img "Instagram" [ref=e119]
+            - link [ref=e120] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/gaprecruitmentserviceslimited/
+              - img "LinkedIn" [ref=e122]
+        - heading "Credentials" [level=3] [ref=e124]
+    - generic [ref=e126]:
+      - paragraph [ref=e127]: © 2026 Gap Recruitment Services Limited. All rights reserved.
+      - generic [ref=e128]:
+        - link "Privacy Policy" [ref=e129] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=e130] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Cookie Policy" [ref=e131] [cursor=pointer]:
+          - /url: /cookie-policy
+      - paragraph [ref=e132]:
+        - text: Developed by
+        - link "Sephanly" [ref=e133] [cursor=pointer]:
+          - /url: https://dev.sephan.co.ke
+  - generic [ref=e134] [cursor=pointer]: Hey, Inquire here!
+  - generic [ref=e141]:
+    - paragraph [ref=e142]: We use cookies to improve your experience and analyze site traffic.
+    - generic [ref=e143]:
+      - button "Accept" [ref=e144]
+      - button "Reject" [ref=e145]
+    - link "Cookie Policy" [ref=e146] [cursor=pointer]:
+      - /url: /cookie-policy

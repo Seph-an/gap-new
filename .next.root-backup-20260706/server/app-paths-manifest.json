@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/revalidate/route": "app/api/revalidate/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/attributions/page": "app/attributions/page.js",
+  "/blog/[[...slug]]/page": "app/blog/[[...slug]]/page.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/cookie-policy/page": "app/cookie-policy/page.js",
+  "/frequently-asked-questions/page": "app/frequently-asked-questions/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/job-seeker/page": "app/job-seeker/page.js",
+  "/blog/category/[[...slug]]/page": "app/blog/category/[[...slug]]/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/page": "app/page.js",
+  "/payroll-management/page": "app/payroll-management/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/recruitment-services/page": "app/recruitment-services/page.js",
+  "/staff-outsourcing/page": "app/staff-outsourcing/page.js",
+  "/terms-of-service/page": "app/terms-of-service/page.js"
+}

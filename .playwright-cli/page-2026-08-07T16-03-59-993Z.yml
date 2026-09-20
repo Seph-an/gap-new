@@ -1,0 +1,303 @@
+- main [ref=f10e2]:
+  - navigation [ref=f10e3]:
+    - generic [ref=f10e5]:
+      - link [ref=f10e6] [cursor=pointer]:
+        - /url: /
+        - img "Gap Recruitment Services Limited" [ref=f10e7]
+      - generic [ref=f10e8]:
+        - link "Home" [ref=f10e9] [cursor=pointer]:
+          - /url: /
+        - button "Services" [ref=f10e11]
+        - link "Case Studies" [ref=f10e14] [cursor=pointer]:
+          - /url: /recruitment-payroll-and-staff-outsourcing-case-studies-by-gap-recruitment-services
+        - link "About" [ref=f10e15] [cursor=pointer]:
+          - /url: /about-us
+        - link "Blog" [ref=f10e16] [cursor=pointer]:
+          - /url: /blog
+        - generic [ref=f10e18]:
+          - link "For Job Seekers" [ref=f10e19] [cursor=pointer]:
+            - /url: /job-seeker
+            - text: For Job Seekers
+            - generic [ref=f10e20]: NEW!
+          - button "Toggle For Job Seekers menu" [ref=f10e21]
+        - link "Contact" [ref=f10e24] [cursor=pointer]:
+          - /url: /contact-us
+        - link "Listed Jobs" [ref=f10e25] [cursor=pointer]:
+          - /url: /jobs-at-gap-recruitment-services-kenya
+  - generic [ref=f10e28]:
+    - generic [ref=f10e29]:
+      - generic [ref=f10e30]:
+        - paragraph [ref=f10e31]: 5+ Years of CV Writing Expertise
+        - heading "Professional CV Writing Services" [level=1] [ref=f10e32]
+        - paragraph [ref=f10e33]: Work with experienced career writers to present your strengths clearly, pass applicant tracking systems and approach your next opportunity with confidence.
+        - list "5+ Years of CV Writing Expertise" [ref=f10e34]:
+          - listitem [ref=f10e35]:
+            - generic [ref=f10e39]: ATS optimised
+          - listitem [ref=f10e40]:
+            - generic [ref=f10e44]: Written by experts
+          - listitem [ref=f10e45]:
+            - generic [ref=f10e49]: Quick turnaround
+          - listitem [ref=f10e50]:
+            - generic [ref=f10e53]: Revisions included
+      - complementary [ref=f10e54]:
+        - heading "Get Started in 3 Simple Steps" [level=2] [ref=f10e55]
+        - list [ref=f10e56]:
+          - listitem [ref=f10e57]:
+            - generic [ref=f10e63]:
+              - text: "1"
+              - paragraph [ref=f10e64]: Choose your package
+          - listitem [ref=f10e67]:
+            - generic [ref=f10e71]:
+              - text: "2"
+              - paragraph [ref=f10e72]: Pay securely via M-PESA
+          - listitem [ref=f10e75]:
+            - generic [ref=f10e80]:
+              - text: "3"
+              - paragraph [ref=f10e81]: Share your information and receive your CV
+    - list [ref=f10e104]:
+      - listitem [ref=f10e105]:
+        - generic [ref=f10e109]:
+          - generic [ref=f10e110]: Secure M-PESA payment
+          - generic [ref=f10e111]: Protected local payments
+      - listitem [ref=f10e112]:
+        - generic [ref=f10e117]:
+          - generic [ref=f10e118]: Editable Word and PDF files
+          - generic [ref=f10e119]: Ready to use and update
+      - listitem [ref=f10e120]:
+        - generic [ref=f10e124]:
+          - generic [ref=f10e125]: Dedicated support
+          - generic [ref=f10e126]: Guidance throughout the process
+      - listitem [ref=f10e127]:
+        - generic [ref=f10e132]:
+          - generic [ref=f10e133]: Confidential handling
+          - generic [ref=f10e134]: Your information stays private
+  - generic [ref=f10e136]:
+    - generic [ref=f10e137]:
+      - paragraph [ref=f10e138]: Invest in your next opportunity
+      - heading "CV Packages & Pricing" [level=2] [ref=f10e139]
+      - paragraph [ref=f10e140]: Choose the package that fits your career goals.
+    - generic [ref=f10e141]:
+      - paragraph [ref=f10e142]: Select your career level to see packages and pricing.
+      - group "Select your career level to see packages and pricing." [ref=f10e143]:
+        - button "Starter Students, graduates and professionals beginning their careers." [ref=f10e144] [cursor=pointer]:
+          - generic [ref=f10e145]: Starter
+          - generic [ref=f10e151]: Students, graduates and professionals beginning their careers.
+        - button "Professional Experienced professionals ready for their next opportunity." [pressed] [ref=f10e152] [cursor=pointer]:
+          - generic [ref=f10e153]: Professional
+          - generic [ref=f10e160]: Experienced professionals ready for their next opportunity.
+        - button "Leadership Managers and senior specialists moving into leadership roles." [ref=f10e161] [cursor=pointer]:
+          - generic [ref=f10e162]: Leadership
+          - generic [ref=f10e168]: Managers and senior specialists moving into leadership roles.
+        - button "Executive Directors and executives pursuing high-impact appointments." [ref=f10e169] [cursor=pointer]:
+          - generic [ref=f10e170]: Executive
+          - generic [ref=f10e173]: Directors and executives pursuing high-impact appointments.
+      - paragraph [ref=f10e174]:
+        - text: Not sure which career level is right for you?
+        - link "Help Me Choose" [ref=f10e175] [cursor=pointer]:
+          - /url: /contact-us?service=cv-package-guidance
+    - paragraph [ref=f10e176]: "Package options updated: Professional"
+    - generic [ref=f10e177]:
+      - article [ref=f10e178]:
+        - heading "Professional Essential" [level=3] [ref=f10e183]
+        - paragraph [ref=f10e184]: A strategically written CV for experienced professionals changing or advancing roles.
+        - list [ref=f10e185]:
+          - listitem [ref=f10e186]:
+            - generic [ref=f10e189]: Achievement-focused CV writing
+          - listitem [ref=f10e190]:
+            - generic [ref=f10e193]: ATS-friendly formatting
+          - listitem [ref=f10e194]:
+            - generic [ref=f10e197]: Word and PDF files
+          - listitem [ref=f10e198]:
+            - generic [ref=f10e201]: Two revision rounds
+        - generic [ref=f10e202]:
+          - paragraph [ref=f10e203]:
+            - generic [ref=f10e204]: Ksh 3,500
+          - paragraph [ref=f10e205]: 3–4 working days
+          - link "Choose Professional Essential" [ref=f10e209] [cursor=pointer]:
+            - /url: /contact-us?service=cv-writing&package=professional-essential
+      - article [ref=f10e210]:
+        - generic [ref=f10e211]: Most Popular
+        - heading "Professional Advantage" [level=3] [ref=f10e215]
+        - paragraph [ref=f10e216]: A polished CV and supporting career assets for a competitive job search.
+        - list [ref=f10e217]:
+          - listitem [ref=f10e218]:
+            - generic [ref=f10e221]: Achievement-focused CV writing
+          - listitem [ref=f10e222]:
+            - generic [ref=f10e225]: Tailored cover letter
+          - listitem [ref=f10e226]:
+            - generic [ref=f10e229]: LinkedIn optimisation
+          - listitem [ref=f10e230]:
+            - generic [ref=f10e233]: 30-minute consultation
+          - listitem [ref=f10e234]:
+            - generic [ref=f10e237]: Two revision rounds
+        - generic [ref=f10e238]:
+          - paragraph [ref=f10e239]:
+            - generic [ref=f10e240]: From
+            - generic [ref=f10e241]: Ksh 5,200
+          - paragraph [ref=f10e242]: 4–5 working days
+          - link "Choose Professional Advantage" [ref=f10e246] [cursor=pointer]:
+            - /url: /contact-us?service=cv-writing&package=professional-advantage
+      - article [ref=f10e247]:
+        - heading "Professional Premium" [level=3] [ref=f10e251]
+        - paragraph [ref=f10e252]: Stronger personal positioning for competitive specialist and mid-career roles.
+        - list [ref=f10e253]:
+          - listitem [ref=f10e254]:
+            - generic [ref=f10e257]: Strategic CV rewrite
+          - listitem [ref=f10e258]:
+            - generic [ref=f10e261]: Tailored cover letter
+          - listitem [ref=f10e262]:
+            - generic [ref=f10e265]: LinkedIn optimisation
+          - listitem [ref=f10e266]:
+            - generic [ref=f10e269]: 45-minute consultation
+        - generic [ref=f10e270]:
+          - paragraph [ref=f10e271]:
+            - generic [ref=f10e272]: From
+            - generic [ref=f10e273]: Ksh 6,800
+          - paragraph [ref=f10e274]: 4–5 working days
+          - link "Choose Professional Premium" [ref=f10e278] [cursor=pointer]:
+            - /url: /contact-us?service=cv-writing&package=professional-premium
+      - article [ref=f10e279]:
+        - heading "Professional Complete" [level=3] [ref=f10e283]
+        - paragraph [ref=f10e284]: End-to-end career branding and interview support for your next move.
+        - list [ref=f10e285]:
+          - listitem [ref=f10e286]:
+            - generic [ref=f10e289]: CV, cover letter and LinkedIn
+          - listitem [ref=f10e290]:
+            - generic [ref=f10e293]: Personal positioning strategy
+          - listitem [ref=f10e294]:
+            - generic [ref=f10e297]: Interview preparation session
+          - listitem [ref=f10e298]:
+            - generic [ref=f10e301]: Three revision rounds
+        - generic [ref=f10e302]:
+          - paragraph [ref=f10e303]:
+            - generic [ref=f10e304]: From
+            - generic [ref=f10e305]: Ksh 8,200
+          - paragraph [ref=f10e306]: 5 working days
+          - link "Choose Professional Complete" [ref=f10e310] [cursor=pointer]:
+            - /url: /contact-us?service=cv-writing&package=professional-complete
+  - region [ref=f10e311]:
+    - generic [ref=f10e312]:
+      - generic [ref=f10e313]:
+        - paragraph [ref=f10e314]: Questions, answered
+        - heading "CV writing FAQs" [level=2] [ref=f10e315]
+        - paragraph [ref=f10e316]: Everything you need to know before choosing your CV-writing package.
+      - generic [ref=f10e317]:
+        - generic [ref=f10e318]:
+          - generic [ref=f10e319]:
+            - heading [level=3] [ref=f10e320]:
+              - button "Will my new CV be ATS-friendly?" [expanded] [ref=f10e321]
+            - region "Will my new CV be ATS-friendly?" [ref=f10e325]:
+              - paragraph [ref=f10e329]: Yes. We structure and format your CV so applicant tracking systems can read it clearly, while keeping it polished for recruiters and hiring managers.
+          - generic [ref=f10e330]:
+            - heading [level=3] [ref=f10e331]:
+              - button "Can you write a CV if I do not have one?" [ref=f10e332]
+            - region "Can you write a CV if I do not have one?":
+              - paragraph [ref=f10e338]: Yes. We can build your CV from the beginning. After payment, we will guide you through the information we need about your education, experience, skills and career goals.
+          - generic [ref=f10e339]:
+            - heading [level=3] [ref=f10e340]:
+              - button "How many revisions are included?" [ref=f10e341]
+            - region "How many revisions are included?":
+              - paragraph [ref=f10e347]: Revision rounds depend on the package you select. Each package card shows the number included, and we use your feedback to refine the content within that scope.
+          - generic [ref=f10e348]:
+            - heading [level=3] [ref=f10e349]:
+              - button "What information do you need from me?" [ref=f10e350]
+            - region "What information do you need from me?":
+              - paragraph [ref=f10e356]: We typically need your current or previous CV, target roles, work history, education, achievements and relevant skills. If something is missing, our team will help you identify it.
+          - generic [ref=f10e357]:
+            - heading [level=3] [ref=f10e358]:
+              - button "How long will my CV take?" [ref=f10e359]
+            - region "How long will my CV take?":
+              - paragraph [ref=f10e365]: The expected turnaround is shown on each package. Timing begins once payment is confirmed and we have received the information needed to start writing.
+          - generic [ref=f10e366]:
+            - heading [level=3] [ref=f10e367]:
+              - button "Will I receive an editable version?" [ref=f10e368]
+            - region "Will I receive an editable version?":
+              - paragraph [ref=f10e374]: Yes. Your final files include an editable Word document as well as a PDF, unless your selected package states otherwise.
+        - link "View all frequently asked questions" [ref=f10e376] [cursor=pointer]:
+          - /url: /frequently-asked-questions
+  - region [ref=f10e380]:
+    - generic [ref=f10e381]:
+      - generic [ref=f10e382]:
+        - paragraph [ref=f10e386]: Secure payments via M-PESA
+        - heading "Ready for a CV that represents you properly?" [level=2] [ref=f10e387]
+        - paragraph [ref=f10e388]: Choose the package that matches your career level, pay conveniently through M-PESA and share your information with our CV-writing team.
+        - paragraph [ref=f10e389]: M-PESA · A secure M-PESA payment prompt is sent directly to your phone.
+        - generic [ref=f10e390]:
+          - button "Choose my CV package" [ref=f10e391]
+          - link "Help me choose a package" [ref=f10e395] [cursor=pointer]:
+            - /url: /contact-us?service=cv-package-guidance
+      - list [ref=f10e399]:
+        - listitem [ref=f10e400]:
+          - generic [ref=f10e405]:
+            - generic [ref=f10e406]: Safe and secure
+            - generic [ref=f10e407]: Your information and payment details are handled carefully.
+        - listitem [ref=f10e408]:
+          - generic [ref=f10e412]:
+            - generic [ref=f10e413]: Pay from your phone
+            - generic [ref=f10e414]: Complete payment through a convenient M-PESA STK prompt.
+        - listitem [ref=f10e415]:
+          - generic [ref=f10e420]:
+            - generic [ref=f10e421]: Quick confirmation
+            - generic [ref=f10e422]: We confirm your order and explain what to send next.
+  - generic [ref=f10e424]:
+    - generic [ref=f10e425]:
+      - generic [ref=f10e427]:
+        - img "Gap Recruitment Services Limited" [ref=f10e428]
+        - generic [ref=f10e429]:
+          - heading "Gap Recruitment Services Limited" [level=2] [ref=f10e430]
+          - heading "Your Talent Solutions Partner!" [level=4] [ref=f10e431]
+      - generic [ref=f10e432]:
+        - heading "Company" [level=3] [ref=f10e433]
+        - generic [ref=f10e434]:
+          - link "Home" [ref=f10e435] [cursor=pointer]:
+            - /url: /
+          - link "Payroll" [ref=f10e436] [cursor=pointer]:
+            - /url: /payroll-management
+          - link "About" [ref=f10e437] [cursor=pointer]:
+            - /url: /about-us
+          - link "Recruitment" [ref=f10e438] [cursor=pointer]:
+            - /url: /recruitment-services
+          - link "Contact" [ref=f10e439] [cursor=pointer]:
+            - /url: /contact-us
+          - link "Outsourcing" [ref=f10e440] [cursor=pointer]:
+            - /url: /staff-outsourcing
+          - link "FAQs" [ref=f10e441] [cursor=pointer]:
+            - /url: /frequently-asked-questions
+      - generic [ref=f10e442]:
+        - generic [ref=f10e443]:
+          - heading "Socials" [level=3] [ref=f10e444]
+          - generic [ref=f10e445]:
+            - link [ref=f10e446] [cursor=pointer]:
+              - /url: https://x.com/GapLimited?t=rPZ0eZMWLEkxW6hqOTZIHg&s=09
+              - img "Twitter" [ref=f10e448]
+            - link [ref=f10e449] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/18jZ4dS8k2/
+              - img "Facebook" [ref=f10e451]
+            - link [ref=f10e452] [cursor=pointer]:
+              - /url: https://www.instagram.com/gap_recruitment?igsh=eWpxNHNpbjlOOWk4
+              - img "Instagram" [ref=f10e454]
+            - link [ref=f10e455] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/gaprecruitmentserviceslimited/
+              - img "LinkedIn" [ref=f10e457]
+        - heading "Credentials" [level=3] [ref=f10e459]
+    - generic [ref=f10e461]:
+      - paragraph [ref=f10e462]: © 2026 Gap Recruitment Services Limited. All rights reserved.
+      - generic [ref=f10e463]:
+        - link "Privacy Policy" [ref=f10e464] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=f10e465] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Cookie Policy" [ref=f10e466] [cursor=pointer]:
+          - /url: /cookie-policy
+      - paragraph [ref=f10e467]:
+        - text: Developed by
+        - link "Sephanly" [ref=f10e468] [cursor=pointer]:
+          - /url: https://dev.sephan.co.ke
+  - generic [ref=f10e469] [cursor=pointer]: Hey, Inquire here!
+  - generic [ref=f10e476]:
+    - paragraph [ref=f10e477]: We use cookies to improve your experience and analyze site traffic.
+    - generic [ref=f10e478]:
+      - button "Accept" [ref=f10e479]
+      - button "Reject" [ref=f10e480]
+    - link "Cookie Policy" [ref=f10e481] [cursor=pointer]:
+      - /url: /cookie-policy

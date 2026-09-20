@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/revalidate/route": "/api/revalidate",
+  "/favicon.ico/route": "/favicon.ico",
+  "/attributions/page": "/attributions",
+  "/blog/[[...slug]]/page": "/blog/[[...slug]]",
+  "/about-us/page": "/about-us",
+  "/cookie-policy/page": "/cookie-policy",
+  "/frequently-asked-questions/page": "/frequently-asked-questions",
+  "/contact-us/page": "/contact-us",
+  "/job-seeker/page": "/job-seeker",
+  "/blog/category/[[...slug]]/page": "/blog/category/[[...slug]]",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/page": "/",
+  "/payroll-management/page": "/payroll-management",
+  "/privacy-policy/page": "/privacy-policy",
+  "/recruitment-services/page": "/recruitment-services",
+  "/staff-outsourcing/page": "/staff-outsourcing",
+  "/terms-of-service/page": "/terms-of-service"
+}

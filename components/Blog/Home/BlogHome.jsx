@@ -1,3 +1,4 @@
+import Breadcrumbs from '@/components/Common/Breadcrumbs';
 import Filter from "./Filter";
 import BlogPost from "./BlogPost";
 import Pagination from "./Pagination";
@@ -35,6 +36,7 @@ const BlogHome = ({ filter, page, blogPosts, pagination, categories }) => {
     <>
       <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       <section className="min-h-screen w-screen px-4 pb-20 pt-32 sm:px-6 md:px-12 lg:px-20 lg:pt-40">
+        <div className="container"><Breadcrumbs items={filter === 'all' ? [{label:'Home',url:'/'},{label:BLOG_NAME,url:'/blog'}] : [{label:'Home',url:'/'},{label:BLOG_NAME,url:'/blog'},{label:decodeURIComponent(filter),url:blogPath({filter,page})}]} className="mb-8" /></div>
         <header className="mx-auto max-w-4xl text-center">
           <p className="font-semibold uppercase tracking-[0.2em] text-[#51D4D6]">Insights</p>
           <h1 className="mt-4 text-4xl font-bold text-white sm:text-5xl">Recruitment and workforce insights</h1>

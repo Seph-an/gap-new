@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/category/[[...slug]]",
+      "regex": "^/blog/category(?:/(.+?))?(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/category(?:/(?<nxtPslug>.+?))?(?:/)?$"
+    },
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/blog/[[...slug]]",
+      "regex": "^/blog(?:/(.+?))?(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog(?:/(?<nxtPslug>.+?))?(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/attributions",
+      "regex": "^/attributions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/attributions(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/cookie-policy",
+      "regex": "^/cookie\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/cookie\\-policy(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/frequently-asked-questions",
+      "regex": "^/frequently\\-asked\\-questions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/frequently\\-asked\\-questions(?:/)?$"
+    },
+    {
+      "page": "/job-seeker",
+      "regex": "^/job\\-seeker(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/job\\-seeker(?:/)?$"
+    },
+    {
+      "page": "/payroll-management",
+      "regex": "^/payroll\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll\\-management(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/recruitment-services",
+      "regex": "^/recruitment\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/recruitment\\-services(?:/)?$"
+    },
+    {
+      "page": "/staff-outsourcing",
+      "regex": "^/staff\\-outsourcing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/staff\\-outsourcing(?:/)?$"
+    },
+    {
+      "page": "/terms-of-service",
+      "regex": "^/terms\\-of\\-service(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms\\-of\\-service(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

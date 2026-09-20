@@ -1,3 +1,4 @@
+import Breadcrumbs from '@/components/Common/Breadcrumbs';
 import JobFeed from '@/components/Jobs/JobFeed';
 import { fetchJobs, jobUrl, JOBS_ROUTE } from '@/lib/jobs';
 
@@ -34,5 +35,5 @@ export default async function JobsPage() {
     },
   };
 
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} /><header className="relative overflow-hidden bg-[#0a0a0a] px-4 pb-20 pt-36 sm:px-6 md:px-12 lg:px-20 lg:pb-24 lg:pt-44"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(81,212,214,0.18),transparent_38%)]" /><div className="container relative"><p className="font-semibold uppercase tracking-[0.24em] text-[#51D4D6]">Careers at leading organisations</p><h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">Find jobs with Gap Recruitment Services Kenya</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">Discover verified opportunities from employers across Kenya. Search and filter current openings, then review every role before applying.</p></div></header><JobFeed initialJobs={result.data} initialPagination={result.meta.pagination} /></>;
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} /><header className="relative overflow-hidden bg-[#0a0a0a] px-4 pb-20 pt-36 sm:px-6 md:px-12 lg:px-20 lg:pb-24 lg:pt-44"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(81,212,214,0.18),transparent_38%)]" /><div className="container relative"><Breadcrumbs items={[{label:'Home',url:'/'},{label:'Jobs',url:JOBS_ROUTE}]} className="mb-8" /><p className="font-semibold uppercase tracking-[0.24em] text-[#51D4D6]">Careers at leading organisations</p><h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">Find jobs with Gap Recruitment Services Kenya</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">Discover verified opportunities from employers across Kenya. Search and filter current openings, then review every role before applying.</p></div></header><JobFeed initialJobs={result.data} initialPagination={result.meta.pagination} /></>;
 }

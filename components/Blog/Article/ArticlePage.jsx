@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Image from 'next/image';
 import { CalendarDays, Clock3 } from 'lucide-react';
+import Breadcrumbs from '@/components/Common/Breadcrumbs';
 import { imageUrl } from '@/lib/cms/strapi';
 
 function MarkdownImage({ src, alt = '' }) {
@@ -34,6 +35,7 @@ export default function ArticlePage({ post }) {
     <article className="min-h-screen w-screen px-4 pb-20 pt-32 sm:px-6 md:px-12 lg:px-20 lg:pt-40">
       <div className="container">
         <div className="mx-auto max-w-5xl">
+          <Breadcrumbs items={[{label:'Home',url:'/'},{label:'Insights',url:'/blog'},{label:post.title,url:'/blog/' + post.slug}]} className="mb-6" structuredData={false} />
           <BackButton backUrl={backUrl} />
           <header className="mt-8">
             <div className="flex flex-wrap gap-2">{post.categories?.map((category) => <span key={category.Title} className="rounded-full bg-[#51D4D6]/10 px-3 py-1 text-sm font-semibold text-[#51D4D6]">{category.Title}</span>)}</div>
