@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateApplication, MAX_RESUME_BYTES } from '../lib/job-application.js';
+import { DAY, formatJobDeadline, getJobDeadlineState } from '../lib/job-deadline.js';
 
 function application(overrides = {}) {
   const data = new FormData();
@@ -28,4 +29,34 @@ test('rejects invalid identifiers, links, phone numbers and long fields', () => 
 });
 test('rejects uploaded files in text fields', () => {
   assert.ok(validateApplication(application({ full_name: new File(['x'], 'x.txt') })).errors.full_name);
+});
+
+test('uses the requested countdown colors at each deadline boundary', () => {
+  const now = Date.parse('2026-09-21T12:00:00Z');
+  const stateAfter = milliseconds => getJobDeadlineState(new Date(now + milliseconds).toISOString(), now);
+
+  assert.equal(stateAfter(7 * DAY + 1).color, 'green');
+  assert.equal(stateAfter(7 * DAY).color, 'yellow');
+  assert.equal(stateAfter(3 * DAY + 1).color, 'yellow');
+  assert.equal(stateAfter(3 * DAY).color, 'orange');
+  assert.equal(stateAfter(DAY + 1).color, 'orange');
+  assert.equal(stateAfter(DAY).color, 'red');
+});
+
+test('closes applications at the cutoff and treats missing deadlines as unavailable', () => {
+  const now = Date.parse('2026-09-21T12:00:00Z');
+  const closed = getJobDeadlineState(new Date(now).toISOString(), now);
+  const unavailable = getJobDeadlineState(null, now);
+
+  assert.equal(closed.closed, true);
+  assert.equal(closed.label, 'Applications closed');
+  assert.equal(unavailable.closed, true);
+  assert.equal(unavailable.status, 'unavailable');
+});
+
+test('formats the exact deadline in Nairobi time', () => {
+  assert.equal(
+    formatJobDeadline('2026-09-21T12:00:00Z'),
+    '21 Sept 2026, 15:00 (Nairobi)',
+  );
 });
